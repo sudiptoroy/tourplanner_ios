@@ -15,7 +15,6 @@
 		36102FD724068DBD0009F61C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36102FD524068DBD0009F61C /* LaunchScreen.storyboard */; };
 		36102FE224068DBD0009F61C /* TourPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36102FE124068DBD0009F61C /* TourPlannerTests.swift */; };
 		36102FED24068DBD0009F61C /* TourPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36102FEC24068DBD0009F61C /* TourPlannerUITests.swift */; };
-		48D293602418CB510010F4F8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D2935F2418CB510010F4F8 /* SignUpViewController.swift */; };
 		48D293642418CEBA0010F4F8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293632418CEBA0010F4F8 /* Constants.swift */; };
 		48D293672418D1CA0010F4F8 /* TButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293662418D1CA0010F4F8 /* TButton.swift */; };
 		48D293692418D1DC0010F4F8 /* TTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293682418D1DC0010F4F8 /* TTextField.swift */; };
@@ -53,7 +52,6 @@
 		36102FE824068DBD0009F61C /* TourPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TourPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36102FEC24068DBD0009F61C /* TourPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourPlannerUITests.swift; sourceTree = "<group>"; };
 		36102FEE24068DBD0009F61C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		48D2935F2418CB510010F4F8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		48D293632418CEBA0010F4F8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		48D293662418D1CA0010F4F8 /* TButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TButton.swift; sourceTree = "<group>"; };
 		48D293682418D1DC0010F4F8 /* TTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTextField.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				36102FCB24068DB60009F61C /* ViewController.swift */,
-				48D2935F2418CB510010F4F8 /* SignUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,7 +298,6 @@
 				48D293642418CEBA0010F4F8 /* Constants.swift in Sources */,
 				36102FD224068DB60009F61C /* TourPlanner.xcdatamodeld in Sources */,
 				36102FCC24068DB60009F61C /* ViewController.swift in Sources */,
-				48D293602418CB510010F4F8 /* SignUpViewController.swift in Sources */,
 				36102FCA24068DB60009F61C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
