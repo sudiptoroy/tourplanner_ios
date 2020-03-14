@@ -49,6 +49,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D0T-4V-2zo"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="QKq-DH-UiR">
                                 <rect key="frame" x="129" y="274" width="120" height="39"/>
@@ -110,6 +113,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="DpS-2o-fE9"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="AQz-Qy-MqG" id="REm-Fk-UCH"/>
+                        <outlet property="passwordTextField" destination="wjI-Dj-70e" id="JKx-6X-oyd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330CF71A7E7CFB87E33714E1 /* Pods_TourPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87DA27009FD05B4ADDD2500 /* Pods_TourPlanner.framework */; };
 		36102FCA24068DB60009F61C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36102FC924068DB60009F61C /* AppDelegate.swift */; };
 		36102FCC24068DB60009F61C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36102FCB24068DB60009F61C /* ViewController.swift */; };
 		36102FCF24068DB60009F61C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36102FCD24068DB60009F61C /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 		36102FD724068DBD0009F61C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36102FD524068DBD0009F61C /* LaunchScreen.storyboard */; };
 		36102FE224068DBD0009F61C /* TourPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36102FE124068DBD0009F61C /* TourPlannerTests.swift */; };
 		36102FED24068DBD0009F61C /* TourPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36102FEC24068DBD0009F61C /* TourPlannerUITests.swift */; };
+		481DE37E241CFBC7006B0D64 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DE37D241CFBC7006B0D64 /* API.swift */; };
+		481DE381241D008C006B0D64 /* GuideLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DE380241D008C006B0D64 /* GuideLoginModel.swift */; };
 		48D293642418CEBA0010F4F8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293632418CEBA0010F4F8 /* Constants.swift */; };
 		48D293672418D1CA0010F4F8 /* TButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293662418D1CA0010F4F8 /* TButton.swift */; };
 		48D293692418D1DC0010F4F8 /* TTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293682418D1DC0010F4F8 /* TTextField.swift */; };
@@ -52,9 +55,14 @@
 		36102FE824068DBD0009F61C /* TourPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TourPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36102FEC24068DBD0009F61C /* TourPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourPlannerUITests.swift; sourceTree = "<group>"; };
 		36102FEE24068DBD0009F61C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		481DE37D241CFBC7006B0D64 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		481DE380241D008C006B0D64 /* GuideLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideLoginModel.swift; sourceTree = "<group>"; };
 		48D293632418CEBA0010F4F8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		48D293662418D1CA0010F4F8 /* TButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TButton.swift; sourceTree = "<group>"; };
 		48D293682418D1DC0010F4F8 /* TTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTextField.swift; sourceTree = "<group>"; };
+		D7AF61286C0D3710021D1B79 /* Pods-TourPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourPlanner.debug.xcconfig"; path = "Target Support Files/Pods-TourPlanner/Pods-TourPlanner.debug.xcconfig"; sourceTree = "<group>"; };
+		F87DA27009FD05B4ADDD2500 /* Pods_TourPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TourPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8E087C3374BEA5B0AC1FA96 /* Pods-TourPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourPlanner.release.xcconfig"; path = "Target Support Files/Pods-TourPlanner/Pods-TourPlanner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330CF71A7E7CFB87E33714E1 /* Pods_TourPlanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		078EC81AE0024373B20974B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7AF61286C0D3710021D1B79 /* Pods-TourPlanner.debug.xcconfig */,
+				F8E087C3374BEA5B0AC1FA96 /* Pods-TourPlanner.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		19AB65C60D036F5EB3576F72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F87DA27009FD05B4ADDD2500 /* Pods_TourPlanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		36102FBD24068DB60009F61C = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +115,8 @@
 				36102FE024068DBD0009F61C /* TourPlannerTests */,
 				36102FEB24068DBD0009F61C /* TourPlannerUITests */,
 				36102FC724068DB60009F61C /* Products */,
+				078EC81AE0024373B20974B9 /* Pods */,
+				19AB65C60D036F5EB3576F72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +133,8 @@
 		36102FC824068DB60009F61C /* TourPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				481DE37F241D0011006B0D64 /* Alamofire Models */,
+				481DE37C241CFB98006B0D64 /* Static Functions */,
 				48D293652418D1900010F4F8 /* CustomViews */,
 				48D293622418CE8E0010F4F8 /* Utils */,
 				48D293612418CE3F0010F4F8 /* Controller */,
@@ -134,6 +164,22 @@
 				36102FEE24068DBD0009F61C /* Info.plist */,
 			);
 			path = TourPlannerUITests;
+			sourceTree = "<group>";
+		};
+		481DE37C241CFB98006B0D64 /* Static Functions */ = {
+			isa = PBXGroup;
+			children = (
+				481DE37D241CFBC7006B0D64 /* API.swift */,
+			);
+			path = "Static Functions";
+			sourceTree = "<group>";
+		};
+		481DE37F241D0011006B0D64 /* Alamofire Models */ = {
+			isa = PBXGroup;
+			children = (
+				481DE380241D008C006B0D64 /* GuideLoginModel.swift */,
+			);
+			path = "Alamofire Models";
 			sourceTree = "<group>";
 		};
 		48D293612418CE3F0010F4F8 /* Controller */ = {
@@ -169,9 +215,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36102FF124068DBD0009F61C /* Build configuration list for PBXNativeTarget "TourPlanner" */;
 			buildPhases = (
+				41F44EF91E976D9435E435A9 /* [CP] Check Pods Manifest.lock */,
 				36102FC224068DB60009F61C /* Sources */,
 				36102FC324068DB60009F61C /* Frameworks */,
 				36102FC424068DB60009F61C /* Resources */,
+				92F4E510C9999DBACA36A6B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,17 +336,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		41F44EF91E976D9435E435A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TourPlanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92F4E510C9999DBACA36A6B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TourPlanner/Pods-TourPlanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TourPlanner/Pods-TourPlanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TourPlanner/Pods-TourPlanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		36102FC224068DB60009F61C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481DE381241D008C006B0D64 /* GuideLoginModel.swift in Sources */,
 				48D293692418D1DC0010F4F8 /* TTextField.swift in Sources */,
 				48D293672418D1CA0010F4F8 /* TButton.swift in Sources */,
 				48D293642418CEBA0010F4F8 /* Constants.swift in Sources */,
 				36102FD224068DB60009F61C /* TourPlanner.xcdatamodeld in Sources */,
 				36102FCC24068DB60009F61C /* ViewController.swift in Sources */,
 				36102FCA24068DB60009F61C /* AppDelegate.swift in Sources */,
+				481DE37E241CFBC7006B0D64 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +563,7 @@
 		};
 		36102FF224068DBD0009F61C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7AF61286C0D3710021D1B79 /* Pods-TourPlanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -482,12 +575,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Code-x.TourPlanner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		36102FF324068DBD0009F61C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8E087C3374BEA5B0AC1FA96 /* Pods-TourPlanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -499,7 +593,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Code-x.TourPlanner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
