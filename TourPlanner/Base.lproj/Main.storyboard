@@ -258,7 +258,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSg-4J-VTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1749.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1873" y="135"/>
+        </scene>
+        <!--Pending Profile View Controller-->
+        <scene sceneID="PNh-9c-PjE">
+            <objects>
+                <viewController id="1bZ-Xq-RDf" customClass="PendingProfileViewController" customModule="TourPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sI9-d7-Xgq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ToW-tJ-Gbi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="boP-Xy-qbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068" y="817"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AyP-OP-quZ">

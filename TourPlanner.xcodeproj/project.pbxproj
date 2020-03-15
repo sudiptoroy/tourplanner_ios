@@ -18,6 +18,7 @@
 		36102FED24068DBD0009F61C /* TourPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36102FEC24068DBD0009F61C /* TourPlannerUITests.swift */; };
 		481DE37E241CFBC7006B0D64 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DE37D241CFBC7006B0D64 /* API.swift */; };
 		481DE381241D008C006B0D64 /* GuideLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DE380241D008C006B0D64 /* GuideLoginModel.swift */; };
+		4853BA25241E29610049C5FA /* PendingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4853BA24241E29610049C5FA /* PendingProfileViewController.swift */; };
 		48D293642418CEBA0010F4F8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293632418CEBA0010F4F8 /* Constants.swift */; };
 		48D293672418D1CA0010F4F8 /* TButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293662418D1CA0010F4F8 /* TButton.swift */; };
 		48D293692418D1DC0010F4F8 /* TTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293682418D1DC0010F4F8 /* TTextField.swift */; };
@@ -57,6 +58,7 @@
 		36102FEE24068DBD0009F61C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		481DE37D241CFBC7006B0D64 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		481DE380241D008C006B0D64 /* GuideLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideLoginModel.swift; sourceTree = "<group>"; };
+		4853BA24241E29610049C5FA /* PendingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingProfileViewController.swift; sourceTree = "<group>"; };
 		48D293632418CEBA0010F4F8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		48D293662418D1CA0010F4F8 /* TButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TButton.swift; sourceTree = "<group>"; };
 		48D293682418D1DC0010F4F8 /* TTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTextField.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				36102FCB24068DB60009F61C /* ViewController.swift */,
+				4853BA24241E29610049C5FA /* PendingProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				36102FCC24068DB60009F61C /* ViewController.swift in Sources */,
 				36102FCA24068DB60009F61C /* AppDelegate.swift in Sources */,
 				481DE37E241CFBC7006B0D64 /* API.swift in Sources */,
+				4853BA25241E29610049C5FA /* PendingProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
