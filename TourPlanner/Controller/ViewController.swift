@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         let userPassword = passwordTextField.text
         //let decoder = JSONDecoder()
         
+        // Checking if the fields are empty
         if (userEmail == "" || userPassword == "") {
             
             let alert = UIAlertController(title: "Empty Credentials", message: "You Must Enter your email and password", preferredStyle: .alert)
@@ -35,13 +36,17 @@ class ViewController: UIViewController {
             
         } else if ( userEmail != "" && userPassword != "") {
             
+            // User login info parameters using dictionary
             let loginDict = ["email" : userEmail!,
                              "password": userPassword!,
                              "api_key": API.API_key] as [String: Any]
             
+            
+            // Calling the api with the parameter
             Alamofire.request(API.baseURL + "/guides/login", method: .post, parameters: loginDict).validate().responseJSON {
                 response in
                 
+                // Showing the response in log
                 print(response)
                 
                 do {
