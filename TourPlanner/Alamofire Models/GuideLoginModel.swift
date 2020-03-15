@@ -8,9 +8,26 @@
 
 import Foundation
 
+
+
+
 struct Guide :Decodable {
-    let message: String?
-    let email: String?
-    let id: Int
+    let success: Bool
+    let message: String
+    let data: [User]
     
 }
+
+struct User :Decodable {
+    let id: Int?
+    let email: String?
+    let is_verified: Bool?
+    
+//    init( success: Bool?,
+//          data: [User] = [])
+//    {
+//        self.success = success ?? false
+//        self.data = data
+//    }
+}
+
