@@ -223,6 +223,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -267,13 +270,64 @@
                     <view key="view" contentMode="scaleToFill" id="sI9-d7-Xgq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="16" affinity="minX"/>
+                            <userLayoutGuide location="359" affinity="minX"/>
+                        </userGuides>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unicorn" translatesAutoresizingMaskIntoConstraints="NO" id="qxU-WD-HDc">
+                                <rect key="frame" x="118" y="69" width="139" height="154"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjh-0X-Rli">
+                                <rect key="frame" x="16" y="442" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.33333333329999998" green="0.83137254900000002" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="eP8-h1-b2R"/>
+                                    <constraint firstAttribute="height" constant="50" id="g3J-rw-Jde"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Ok">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold you Hourses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrG-A1-2u4">
+                                <rect key="frame" x="115" y="281" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your profile is pending for approval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQp-f5-PQg">
+                                <rect key="frame" x="54" y="327" width="267" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bjh-0X-Rli" firstAttribute="top" secondItem="dQp-f5-PQg" secondAttribute="bottom" constant="94" id="1md-5j-5Gm"/>
+                            <constraint firstItem="JrG-A1-2u4" firstAttribute="leading" secondItem="ToW-tJ-Gbi" secondAttribute="leading" constant="115" id="8oO-t0-8ri"/>
+                            <constraint firstItem="dQp-f5-PQg" firstAttribute="top" secondItem="JrG-A1-2u4" secondAttribute="bottom" constant="25" id="FmY-Du-OJ1"/>
+                            <constraint firstItem="Bjh-0X-Rli" firstAttribute="leading" secondItem="ToW-tJ-Gbi" secondAttribute="leading" constant="16" id="OKc-p4-Cgz"/>
+                            <constraint firstItem="dQp-f5-PQg" firstAttribute="leading" secondItem="ToW-tJ-Gbi" secondAttribute="leading" constant="54" id="Rut-Sj-Dye"/>
+                            <constraint firstItem="ToW-tJ-Gbi" firstAttribute="trailing" secondItem="dQp-f5-PQg" secondAttribute="trailing" constant="54" id="UlR-PG-OfO"/>
+                            <constraint firstItem="JrG-A1-2u4" firstAttribute="top" secondItem="qxU-WD-HDc" secondAttribute="bottom" constant="58" id="c2t-ah-SDA"/>
+                            <constraint firstItem="qxU-WD-HDc" firstAttribute="top" secondItem="ToW-tJ-Gbi" secondAttribute="top" constant="49" id="cvb-69-2LE"/>
+                            <constraint firstItem="qxU-WD-HDc" firstAttribute="leading" secondItem="ToW-tJ-Gbi" secondAttribute="leading" constant="118" id="f3m-fe-grs"/>
+                            <constraint firstItem="ToW-tJ-Gbi" firstAttribute="trailing" secondItem="Bjh-0X-Rli" secondAttribute="trailing" constant="16" id="h3m-C4-fMF"/>
+                            <constraint firstItem="ToW-tJ-Gbi" firstAttribute="trailing" secondItem="JrG-A1-2u4" secondAttribute="trailing" constant="115" id="nrI-af-Pgf"/>
+                            <constraint firstItem="ToW-tJ-Gbi" firstAttribute="bottom" secondItem="Bjh-0X-Rli" secondAttribute="bottom" constant="175" id="uAP-ki-eyI"/>
+                            <constraint firstItem="ToW-tJ-Gbi" firstAttribute="trailing" secondItem="qxU-WD-HDc" secondAttribute="trailing" constant="118" id="vA4-eU-Ngx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ToW-tJ-Gbi"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boP-Xy-qbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="817"/>
+            <point key="canvasLocation" x="1068" y="816.34182908545733"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AyP-OP-quZ">
@@ -296,5 +350,6 @@
     </scenes>
     <resources>
         <image name="Logo" width="100" height="100"/>
+        <image name="Unicorn" width="139" height="154"/>
     </resources>
 </document>
