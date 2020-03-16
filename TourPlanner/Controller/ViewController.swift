@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var check = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,54 +32,77 @@ class ViewController: UIViewController {
             self.displayAlertMessage("Empty Credentials", "You must Enter your email and password")
         } else if ( userEmail != "" && userPassword != "") {
             
-            // User login info parameters using dictionary
-            let loginDict = ["email" : userEmail!,
-                             "password": userPassword!,
-                             "api_key": API.API_key] as [String: Any]
-            
-            // Calling the api with the parameter
-            Alamofire.request(API.baseURL + "/guides/login", method: .post, parameters: loginDict).validate().responseJSON {
-                response in
+            // Check if the email is valid
+            if (isValidEmail(email: userEmail!)){
                 
-                // Showing the response in log
-                print(response)
+                // User login info parameters using dictionary
+                let loginDict = ["email" : userEmail!,
+                                 "password": userPassword!,
+                                 "api_key": API.API_key] as [String: Any]
                 
-                do {
-                    // let loginResponseData = try self.decoder.decode(Guide.self, from: response.data! )
-                    let loginResponseData = try JSONDecoder().decode(Guide.self, from: response.data!)
-                    let successMessage = loginResponseData.success
-                    let isVerified = loginResponseData.data[0].is_verified
-                    let id = loginResponseData.data[0].id
-                    print(isVerified!)
-                    print(id!)
+                // Calling the api with the parameter
+                Alamofire.request(API.baseURL + "/guides/login", method: .post, parameters: loginDict).validate().responseJSON {
+                    response in
                     
-                    print(successMessage as Any)
+                    // Showing the response in log
+                    print(response)
                     
-                    if (successMessage == true) {
-                        
-                        if (isVerified == 0) {
-                            self.dismiss(animated: true, completion: nil)
-                            self.performSegue(withIdentifier: "PendingView", sender: self)
+                    if let result = response.result.value {
+                        let JSON = result as! NSDictionary
+                        print("Success =")
+                        print(JSON["success"]!)
+                        self.check = JSON["success"] as! Bool
+                        //let check = Bool(JSON["success"])!
+                        print(self.check)
+                    }
+                    
+                    if (!self.check) {
+                        self.displayAlertMessage("Invalid Credentials", "Please enter correct email and password")
+                    } else if (self.check) {
+                        do {
+                            // let loginResponseData = try self.decoder.decode(Guide.self, from: response.data! )
+                            let loginResponseData = try JSONDecoder().decode(Guide.self, from: response.data!)
+                            let successMessage = loginResponseData.success
+                            let isVerified = loginResponseData.data[0].is_verified
+                            let id = loginResponseData.data[0].id
+                            print(isVerified!)
+                            print(id!)
+                            
+                            print(successMessage as Any)
+                            
+                            if (successMessage == true) {
+                                
+                                if (isVerified == 0) {
+                                    self.dismiss(animated: true, completion: nil)
+                                    self.performSegue(withIdentifier: "PendingView", sender: self)
+                                }
+                            }
+                        } catch {
+                            print("Error While Parsing Json")
                         }
                     }
-                } catch {
-                    print("Error While Parsing Json")
+                    
                 }
-                if let result = response.result.value {
-                    let JSON = result as! NSDictionary
-                    print(JSON["success"]!)
-                }
+            } else {
+                displayAlertMessage("Invalid email", "Your email address is not valid")
             }
         }
     }
     
     // Function to display alert message
-    
     func displayAlertMessage(_ title: String,_ userMessage: String) {
         let userAlert = UIAlertController(title: title, message:  userMessage, preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
         userAlert.addAction(okAction)
         self.present(userAlert, animated: true, completion: nil)
+    }
+    
+    // Function to verify valid email address
+    func isValidEmail(email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
     }
 }
 

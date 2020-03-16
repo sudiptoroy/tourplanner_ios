@@ -23,11 +23,3 @@ struct User :Decodable {
     let email: String?
     let is_verified: Int?
 }
-
-
-// if login info is incorrect
-
-struct GuideFailed :Decodable {
-    let success: Bool
-    let message: String
-}
