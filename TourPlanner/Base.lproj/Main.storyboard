@@ -22,10 +22,10 @@
                         </userGuides>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="oiy-ba-9Jy">
-                                <rect key="frame" x="137" y="137" width="100" height="100"/>
+                                <rect key="frame" x="137" y="93" width="100" height="100"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AQz-Qy-MqG">
-                                <rect key="frame" x="16" y="375" width="343" height="44"/>
+                                <rect key="frame" x="16" y="331" width="343" height="44"/>
                                 <color key="backgroundColor" white="0.88" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="3XW-gM-0XM"/>
@@ -36,7 +36,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2v-3h-jel">
-                                <rect key="frame" x="16" y="495" width="343" height="50"/>
+                                <rect key="frame" x="16" y="451" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.33333333333333331" green="0.83137254901960778" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="BVN-WY-U7s"/>
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="QKq-DH-UiR">
-                                <rect key="frame" x="129" y="274" width="120" height="39"/>
+                                <rect key="frame" x="129" y="230" width="120" height="39"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello There." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiH-Hy-2eF">
                                         <rect key="frame" x="20" y="0.0" width="80.5" height="17.5"/>
@@ -71,7 +71,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wjI-Dj-70e">
-                                <rect key="frame" x="16" y="427" width="343" height="44"/>
+                                <rect key="frame" x="16" y="383" width="343" height="44"/>
                                 <color key="backgroundColor" white="0.88151041666666663" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="bEq-M3-gaX"/>
@@ -81,14 +81,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwf-q5-nsz">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwf-q5-nsz">
                                 <rect key="frame" x="133" y="551" width="109" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpK-HX-Dol">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpK-HX-Dol">
                                 <rect key="frame" x="108" y="605" width="159" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="New Here? Sign Up Insted">
@@ -130,6 +130,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="AQz-Qy-MqG" id="REm-Fk-UCH"/>
                         <outlet property="passwordTextField" destination="wjI-Dj-70e" id="JKx-6X-oyd"/>
+                        <segue destination="1bZ-Xq-RDf" kind="presentation" identifier="PendingView" id="SBQ-kH-IWw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -148,10 +149,10 @@
                             <userLayoutGuide location="359" affinity="minX"/>
                         </userGuides>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="eIy-sW-mg1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="eIy-sW-mg1">
                                 <rect key="frame" x="137" y="104.5" width="100" height="100"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get on board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xy2-9v-6c2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Get on board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xy2-9v-6c2">
                                 <rect key="frame" x="141" y="245" width="93" height="17"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -292,6 +293,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="IIr-Q8-rBi"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold you Hourses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrG-A1-2u4">
                                 <rect key="frame" x="115" y="281" width="145" height="21"/>
@@ -327,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boP-Xy-qbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="816.34182908545733"/>
+            <point key="canvasLocation" x="908" y="904"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AyP-OP-quZ">
@@ -352,4 +356,7 @@
         <image name="Logo" width="100" height="100"/>
         <image name="Unicorn" width="139" height="154"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="IIr-Q8-rBi"/>
+    </inferredMetricsTieBreakers>
 </document>

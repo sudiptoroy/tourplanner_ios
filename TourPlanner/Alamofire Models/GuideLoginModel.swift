@@ -21,13 +21,13 @@ struct Guide :Decodable {
 struct User :Decodable {
     let id: Int?
     let email: String?
-    let is_verified: Bool?
-    
-//    init( success: Bool?,
-//          data: [User] = [])
-//    {
-//        self.success = success ?? false
-//        self.data = data
-//    }
+    let is_verified: Int?
 }
 
+
+// if login info is incorrect
+
+struct GuideFailed :Decodable {
+    let success: Bool
+    let message: String
+}

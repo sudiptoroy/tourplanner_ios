@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,24 +24,16 @@ class ViewController: UIViewController {
         
         let userEmail = emailTextField.text
         let userPassword = passwordTextField.text
-        //let decoder = JSONDecoder()
         
         // Checking if the fields are empty
         if (userEmail == "" || userPassword == "") {
-            
-            let alert = UIAlertController(title: "Empty Credentials", message: "You Must Enter your email and password", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            
-            self.present(alert, animated: true)
-            
+            self.displayAlertMessage("Empty Credentials", "You must Enter your email and password")
         } else if ( userEmail != "" && userPassword != "") {
             
             // User login info parameters using dictionary
             let loginDict = ["email" : userEmail!,
                              "password": userPassword!,
                              "api_key": API.API_key] as [String: Any]
-            
             
             // Calling the api with the parameter
             Alamofire.request(API.baseURL + "/guides/login", method: .post, parameters: loginDict).validate().responseJSON {
@@ -50,19 +43,41 @@ class ViewController: UIViewController {
                 print(response)
                 
                 do {
-                    //print("in do")
                     // let loginResponseData = try self.decoder.decode(Guide.self, from: response.data! )
                     let loginResponseData = try JSONDecoder().decode(Guide.self, from: response.data!)
                     let successMessage = loginResponseData.success
+                    let isVerified = loginResponseData.data[0].is_verified
+                    let id = loginResponseData.data[0].id
+                    print(isVerified!)
+                    print(id!)
+                    
                     print(successMessage as Any)
                     
+                    if (successMessage == true) {
+                        
+                        if (isVerified == 0) {
+                            self.dismiss(animated: true, completion: nil)
+                            self.performSegue(withIdentifier: "PendingView", sender: self)
+                        }
+                    }
                 } catch {
-                    
                     print("Error While Parsing Json")
-                    
+                }
+                if let result = response.result.value {
+                    let JSON = result as! NSDictionary
+                    print(JSON["success"]!)
                 }
             }
         }
+    }
+    
+    // Function to display alert message
+    
+    func displayAlertMessage(_ title: String,_ userMessage: String) {
+        let userAlert = UIAlertController(title: title, message:  userMessage, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+        userAlert.addAction(okAction)
+        self.present(userAlert, animated: true, completion: nil)
     }
 }
 
