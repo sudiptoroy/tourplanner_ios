@@ -335,8 +335,8 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="IIr-Q8-rBi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold you Hourses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrG-A1-2u4">
-                                <rect key="frame" x="115" y="281" width="145" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold your Hourses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrG-A1-2u4">
+                                <rect key="frame" x="115" y="281" width="152" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -360,9 +360,9 @@
                             <constraint firstItem="qxU-WD-HDc" firstAttribute="top" secondItem="ToW-tJ-Gbi" secondAttribute="top" constant="49" id="cvb-69-2LE"/>
                             <constraint firstItem="qxU-WD-HDc" firstAttribute="leading" secondItem="ToW-tJ-Gbi" secondAttribute="leading" constant="118" id="f3m-fe-grs"/>
                             <constraint firstItem="ToW-tJ-Gbi" firstAttribute="trailing" secondItem="Bjh-0X-Rli" secondAttribute="trailing" constant="16" id="h3m-C4-fMF"/>
-                            <constraint firstItem="ToW-tJ-Gbi" firstAttribute="trailing" secondItem="JrG-A1-2u4" secondAttribute="trailing" constant="115" id="nrI-af-Pgf"/>
                             <constraint firstItem="ToW-tJ-Gbi" firstAttribute="bottom" secondItem="Bjh-0X-Rli" secondAttribute="bottom" constant="175" id="uAP-ki-eyI"/>
                             <constraint firstItem="ToW-tJ-Gbi" firstAttribute="trailing" secondItem="qxU-WD-HDc" secondAttribute="trailing" constant="118" id="vA4-eU-Ngx"/>
+                            <constraint firstItem="ToW-tJ-Gbi" firstAttribute="trailing" secondItem="JrG-A1-2u4" secondAttribute="trailing" constant="108" id="xXa-LV-vef"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ToW-tJ-Gbi"/>
                     </view>
@@ -396,7 +396,6 @@
         <image name="Vector" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SBQ-kH-IWw"/>
         <segue reference="IIr-Q8-rBi"/>
     </inferredMetricsTieBreakers>
 </document>
