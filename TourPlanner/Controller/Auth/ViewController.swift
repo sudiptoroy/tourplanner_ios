@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     var check = false
+    var guide_id = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +66,7 @@ class ViewController: UIViewController {
                             let successMessage = loginResponseData.success
                             let isVerified = loginResponseData.data[0].is_verified
                             let id = loginResponseData.data[0].id
+                            self.guide_id = id!
                             print(isVerified!)
                             print(id!)
                             
@@ -75,6 +77,9 @@ class ViewController: UIViewController {
                                 if (isVerified == 0) {
                                     self.dismiss(animated: true, completion: nil)
                                     self.performSegue(withIdentifier: "PendingView", sender: self)
+                                } else if (isVerified == 1) {
+                                    self.dismiss(animated: true, completion: nil)
+                                    self.performSegue(withIdentifier: "TabBarView", sender: self)
                                 }
                             }
                         } catch {
@@ -86,6 +91,12 @@ class ViewController: UIViewController {
             } else {
                 displayAlertMessage("Invalid email", "Your email address is not valid")
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let mainTabBarController = segue.destination as? MainTabBarController {
+            mainTabBarController.id = guide_id
         }
     }
     
