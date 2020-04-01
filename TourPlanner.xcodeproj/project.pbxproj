@@ -187,8 +187,7 @@
 		48D293612418CE3F0010F4F8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				36102FCB24068DB60009F61C /* ViewController.swift */,
-				4853BA24241E29610049C5FA /* PendingProfileViewController.swift */,
+				48DF7AB22434624600EF011B /* Auth */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,6 +208,15 @@
 				48D293682418D1DC0010F4F8 /* TTextField.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		48DF7AB22434624600EF011B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				36102FCB24068DB60009F61C /* ViewController.swift */,
+				4853BA24241E29610049C5FA /* PendingProfileViewController.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
