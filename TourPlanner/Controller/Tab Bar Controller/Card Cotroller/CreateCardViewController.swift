@@ -19,6 +19,8 @@ class CreateCardViewController: UIViewController {
     @IBOutlet weak var cardTagsTextField: UITextField!
     
     var id: Int?
+    var card: [String: Any]?
+    var card_id: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +40,6 @@ class CreateCardViewController: UIViewController {
         
         print(pricePerHour as Any)
         
-//        let param = ["id" : id!,
-//                     "api_key": API.API_key] as [String: Any]
-        
         let param = ["guide_id" : id!,
                      "card_title" : cardTitle!,
                      "card_description" : cardDetails!,
@@ -57,6 +56,16 @@ class CreateCardViewController: UIViewController {
             Alamofire.request(API.baseURL + "/cards/setCard", method: .post, parameters: param).validate().responseJSON {
                 response in
                 
+                // Fetching Created Card ID for initial insertion in rating table
+                if let result = response.result.value {
+                    let JSON = result as! NSDictionary
+                    print(JSON["data"]!)
+                    self.card = JSON["data"] as? [String: Any]
+                    print("Fetched Card id")
+                    print(self.card!["id"] as Any)
+                    self.card_id = self.card!["id"] as? Int
+                }
+                
                 do {
                     //let guideProfileResponse = try JSONDecoder().decode(GuideProfile.self, from: response.data!)
                     let createCardResponse = try JSONDecoder().decode(CreateCard.self, from: response.data!)
@@ -66,12 +75,13 @@ class CreateCardViewController: UIViewController {
                 } catch {
                     print("Error While Parsing Json. Check the API model again")
                 }
-                
             }
-            
         } else {
             displayAlertMessage("Invalid Input", "You must enter all fields")
         }
+    }
+    
+    func initialCardRatingInsertion () {
         
     }
     
