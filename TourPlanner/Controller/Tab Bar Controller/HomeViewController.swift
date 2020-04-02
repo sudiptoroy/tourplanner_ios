@@ -40,12 +40,14 @@ class HomeViewController: UIViewController {
                 let rating = guideProfileResponse.data[0].ratings
                 print("Rating")
                 print(rating!)
-                if rating == 0 {
-                    self.ratingLabel.text = "N/A"
-                } else {
-                    self.ratingLabel.text = "\(String(describing: rating))"
-                    //self.ratingLabel.text = rating as? String
-                }
+                //let showRating: String? = String(format:"%f", rating!)
+                //print(showRating!)
+//                if rating == 0 {
+//                    self.ratingLabel.text = "N/A"
+//                } else {
+//                    //self.ratingLabel.text = showRating
+//                    self.ratingLabel.text = rating as? String
+//                }
                 
             } catch {
                 print("Error While parsing")

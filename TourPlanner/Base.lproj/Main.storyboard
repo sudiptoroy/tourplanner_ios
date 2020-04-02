@@ -394,10 +394,10 @@
             </objects>
             <point key="canvasLocation" x="1260" y="2505"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Card View Controller-->
         <scene sceneID="Sot-9z-g2F">
             <objects>
-                <viewController id="CGP-sd-FjS" sceneMemberID="viewController">
+                <viewController id="CGP-sd-FjS" customClass="CreateCardViewController" customModule="TourPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QBm-t5-yia">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
