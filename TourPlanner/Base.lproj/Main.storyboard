@@ -397,7 +397,7 @@
         <!--Create Card View Controller-->
         <scene sceneID="Sot-9z-g2F">
             <objects>
-                <viewController id="CGP-sd-FjS" customClass="CreateCardViewController" customModule="TourPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateCardViewController" id="CGP-sd-FjS" customClass="CreateCardViewController" customModule="TourPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QBm-t5-yia">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -483,6 +483,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createButtonTapped:" destination="CGP-sd-FjS" eventType="touchUpInside" id="jnY-2q-hpN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -512,6 +515,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jhm-31-pHP"/>
                     </view>
+                    <connections>
+                        <outlet property="carTitleTextField" destination="kJg-D2-uf0" id="ZbW-Qs-5XI"/>
+                        <outlet property="cardDetailsTextField" destination="3tb-Te-5Tq" id="BMA-QL-Uld"/>
+                        <outlet property="cardTagsTextField" destination="uie-Rd-rQW" id="p9F-SX-kzi"/>
+                        <outlet property="pricePerDayTextField" destination="xKt-Y9-zdp" id="bxh-73-vCe"/>
+                        <outlet property="pricePerHourTextField" destination="YOK-8x-zFp" id="Ysa-2N-1TV"/>
+                        <outlet property="selectPlaceTextField" destination="ySc-pF-rYW" id="7Vy-ES-sC8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EbS-ZV-Q8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

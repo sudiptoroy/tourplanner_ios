@@ -24,6 +24,10 @@ class MainTabBarController: UITabBarController {
             if let homeViewController = viewController as? HomeViewController {
                 homeViewController.id = id
             }
+            
+            if let createCardController = viewController as? CreateCardViewController {
+                createCardController.id = id
+            }
         }
     }
 }
