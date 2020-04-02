@@ -12,8 +12,7 @@ import Alamofire
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var ratingLabel: UILabel!
-    
+    @IBOutlet weak var rating: UILabel!
     var id: Int?
     
     override func viewDidLoad() {
@@ -40,14 +39,15 @@ class HomeViewController: UIViewController {
                 let rating = guideProfileResponse.data[0].ratings
                 print("Rating")
                 print(rating!)
-                //let showRating: String? = String(format:"%f", rating!)
-                //print(showRating!)
-//                if rating == 0 {
-//                    self.ratingLabel.text = "N/A"
-//                } else {
-//                    //self.ratingLabel.text = showRating
-//                    self.ratingLabel.text = rating as? String
-//                }
+                let showRating: String? = String(format:"%f", rating!)
+                let convertedRating = String(rating!)
+                print(showRating!)
+                if rating == 0.0000000 {
+                    self.rating.text = "N/A"
+                } else {
+                    //self.ratingLabel.text = showRating
+                    self.rating.text = convertedRating
+                }
                 
             } catch {
                 print("Error While parsing")
