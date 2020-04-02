@@ -372,10 +372,10 @@
             </objects>
             <point key="canvasLocation" x="908" y="904"/>
         </scene>
-        <!--View Controller-->
+        <!--Show Cards View Controller-->
         <scene sceneID="Tpg-v4-a8Q">
             <objects>
-                <viewController id="FUJ-eo-NzR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowCardsViewController" id="FUJ-eo-NzR" customClass="ShowCardsViewController" customModule="TourPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zFG-vz-O7n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -385,7 +385,7 @@
                     <navigationItem key="navigationItem" id="efI-fk-ByR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ema-Ul-MeT">
                             <connections>
-                                <segue destination="CGP-sd-FjS" kind="show" id="XoO-gb-ka8"/>
+                                <segue destination="CGP-sd-FjS" kind="show" identifier="CreateCardView" id="XoO-gb-ka8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -651,10 +651,10 @@
             </objects>
             <point key="canvasLocation" x="308" y="134"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Card Navigation Crontroller-->
         <scene sceneID="CIx-8i-zW0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PvD-5A-Vwm" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CardNavigationCrontroller" automaticallyAdjustsScrollViewInsets="NO" id="PvD-5A-Vwm" customClass="CardNavigationCrontroller" customModule="TourPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="Card" selectedImage="Card" id="Voe-dZ-9Rm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nle-dG-PL5">

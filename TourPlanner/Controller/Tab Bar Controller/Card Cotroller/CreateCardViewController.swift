@@ -22,7 +22,7 @@ class CreateCardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("id =")
+        print("id in create card =")
         print(id as Any)
         // Do any additional setup after loading the view.
     }
