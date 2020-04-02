@@ -29,6 +29,8 @@
 		48F4F7962435A412005B8571 /* CreatCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F4F7952435A412005B8571 /* CreatCardModel.swift */; };
 		48F4F7982435AEE4005B8571 /* CardNavigationCrontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F4F7972435AEE4005B8571 /* CardNavigationCrontroller.swift */; };
 		48F4F79A2435B051005B8571 /* ShowCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F4F7992435B051005B8571 /* ShowCardsViewController.swift */; };
+		48F4F79C2435F6D8005B8571 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F4F79B2435F6D8005B8571 /* CardCollectionViewCell.swift */; };
+		48F4F79E24360322005B8571 /* GetCardByGuideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F4F79D24360322005B8571 /* GetCardByGuideModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		48F4F7952435A412005B8571 /* CreatCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatCardModel.swift; sourceTree = "<group>"; };
 		48F4F7972435AEE4005B8571 /* CardNavigationCrontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNavigationCrontroller.swift; sourceTree = "<group>"; };
 		48F4F7992435B051005B8571 /* ShowCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCardsViewController.swift; sourceTree = "<group>"; };
+		48F4F79B2435F6D8005B8571 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		48F4F79D24360322005B8571 /* GetCardByGuideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCardByGuideModel.swift; sourceTree = "<group>"; };
 		D7AF61286C0D3710021D1B79 /* Pods-TourPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourPlanner.debug.xcconfig"; path = "Target Support Files/Pods-TourPlanner/Pods-TourPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 		F87DA27009FD05B4ADDD2500 /* Pods_TourPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TourPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E087C3374BEA5B0AC1FA96 /* Pods-TourPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourPlanner.release.xcconfig"; path = "Target Support Files/Pods-TourPlanner/Pods-TourPlanner.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 				481DE380241D008C006B0D64 /* GuideLoginModel.swift */,
 				48225A6B2434C310007DAF3A /* GuideProfileModel.swift */,
 				48F4F7952435A412005B8571 /* CreatCardModel.swift */,
+				48F4F79D24360322005B8571 /* GetCardByGuideModel.swift */,
 			);
 			path = "Alamofire Models";
 			sourceTree = "<group>";
@@ -250,8 +255,9 @@
 			isa = PBXGroup;
 			children = (
 				48F4F7972435AEE4005B8571 /* CardNavigationCrontroller.swift */,
-				48F4F7992435B051005B8571 /* ShowCardsViewController.swift */,
 				48F4F79324359788005B8571 /* CreateCardViewController.swift */,
+				48F4F79B2435F6D8005B8571 /* CardCollectionViewCell.swift */,
+				48F4F7992435B051005B8571 /* ShowCardsViewController.swift */,
 			);
 			path = "Card Cotroller";
 			sourceTree = "<group>";
@@ -439,7 +445,9 @@
 				48F4F79A2435B051005B8571 /* ShowCardsViewController.swift in Sources */,
 				48F4F79424359788005B8571 /* CreateCardViewController.swift in Sources */,
 				36102FD224068DB60009F61C /* TourPlanner.xcdatamodeld in Sources */,
+				48F4F79C2435F6D8005B8571 /* CardCollectionViewCell.swift in Sources */,
 				48225A662434A1F3007DAF3A /* HomeViewController.swift in Sources */,
+				48F4F79E24360322005B8571 /* GetCardByGuideModel.swift in Sources */,
 				36102FCC24068DB60009F61C /* ViewController.swift in Sources */,
 				48F4F7962435A412005B8571 /* CreatCardModel.swift in Sources */,
 				48F4F7982435AEE4005B8571 /* CardNavigationCrontroller.swift in Sources */,
