@@ -197,10 +197,8 @@
 		481DE37F241D0011006B0D64 /* Alamofire Models */ = {
 			isa = PBXGroup;
 			children = (
-				481DE380241D008C006B0D64 /* GuideLoginModel.swift */,
-				48225A6B2434C310007DAF3A /* GuideProfileModel.swift */,
-				48F4F7952435A412005B8571 /* CreatCardModel.swift */,
-				48F4F79D24360322005B8571 /* GetCardByGuideModel.swift */,
+				48593BD62436EDA500E87A8F /* Guide Models */,
+				48593BD52436ED8200E87A8F /* Card Models */,
 			);
 			path = "Alamofire Models";
 			sourceTree = "<group>";
@@ -213,6 +211,24 @@
 				48F4F79224359730005B8571 /* Card Cotroller */,
 			);
 			path = "Tab Bar Controller";
+			sourceTree = "<group>";
+		};
+		48593BD52436ED8200E87A8F /* Card Models */ = {
+			isa = PBXGroup;
+			children = (
+				48F4F79D24360322005B8571 /* GetCardByGuideModel.swift */,
+				48F4F7952435A412005B8571 /* CreatCardModel.swift */,
+			);
+			path = "Card Models";
+			sourceTree = "<group>";
+		};
+		48593BD62436EDA500E87A8F /* Guide Models */ = {
+			isa = PBXGroup;
+			children = (
+				48225A6B2434C310007DAF3A /* GuideProfileModel.swift */,
+				481DE380241D008C006B0D64 /* GuideLoginModel.swift */,
+			);
+			path = "Guide Models";
 			sourceTree = "<group>";
 		};
 		48D293612418CE3F0010F4F8 /* Controller */ = {
