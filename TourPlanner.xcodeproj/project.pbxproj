@@ -24,6 +24,7 @@
 		4853BA25241E29610049C5FA /* PendingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4853BA24241E29610049C5FA /* PendingProfileViewController.swift */; };
 		48593BD824370F6700E87A8F /* ShowCardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48593BD724370F6700E87A8F /* ShowCardDetailsViewController.swift */; };
 		48593BDA2437348400E87A8F /* GetCardByCardIDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48593BD92437348400E87A8F /* GetCardByCardIDModel.swift */; };
+		48593BDD243755F100E87A8F /* EditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48593BDC243755F100E87A8F /* EditCardViewController.swift */; };
 		48D293642418CEBA0010F4F8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293632418CEBA0010F4F8 /* Constants.swift */; };
 		48D293672418D1CA0010F4F8 /* TButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293662418D1CA0010F4F8 /* TButton.swift */; };
 		48D293692418D1DC0010F4F8 /* TTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293682418D1DC0010F4F8 /* TTextField.swift */; };
@@ -75,6 +76,7 @@
 		4853BA24241E29610049C5FA /* PendingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingProfileViewController.swift; sourceTree = "<group>"; };
 		48593BD724370F6700E87A8F /* ShowCardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCardDetailsViewController.swift; sourceTree = "<group>"; };
 		48593BD92437348400E87A8F /* GetCardByCardIDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCardByCardIDModel.swift; sourceTree = "<group>"; };
+		48593BDC243755F100E87A8F /* EditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardViewController.swift; sourceTree = "<group>"; };
 		48D293632418CEBA0010F4F8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		48D293662418D1CA0010F4F8 /* TButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TButton.swift; sourceTree = "<group>"; };
 		48D293682418D1DC0010F4F8 /* TTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTextField.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				48F4F79B2435F6D8005B8571 /* CardCollectionViewCell.swift */,
 				48F4F7992435B051005B8571 /* ShowCardsViewController.swift */,
 				48593BD724370F6700E87A8F /* ShowCardDetailsViewController.swift */,
+				48593BDC243755F100E87A8F /* EditCardViewController.swift */,
 			);
 			path = "Card Cotroller";
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				48F4F7982435AEE4005B8571 /* CardNavigationCrontroller.swift in Sources */,
 				36102FCA24068DB60009F61C /* AppDelegate.swift in Sources */,
 				481DE37E241CFBC7006B0D64 /* API.swift in Sources */,
+				48593BDD243755F100E87A8F /* EditCardViewController.swift in Sources */,
 				48225A6C2434C310007DAF3A /* GuideProfileModel.swift in Sources */,
 				4853BA25241E29610049C5FA /* PendingProfileViewController.swift in Sources */,
 			);

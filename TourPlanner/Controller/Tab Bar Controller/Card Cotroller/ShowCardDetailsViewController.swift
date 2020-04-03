@@ -75,7 +75,14 @@ class ShowCardDetailsViewController: UIViewController {
         if (serviceStatus == 1) {
             displayAlertMessage("The Card is engaged!", "You are currently Providing Service with this card")
         } else if (serviceStatus == 0) {
-            displayAlertMessage("Under Construction", "Edit feature is not available right now")
+            self.performSegue(withIdentifier: "EditCardView", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "EditCardView") {
+            let vc = segue.destination as! EditCardViewController
+            vc.cardIDReceived = self.cardIDReceived
         }
     }
     

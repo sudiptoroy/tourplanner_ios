@@ -713,11 +713,27 @@
                         <outlet property="cardRatingLabel" destination="FJV-nJ-9pc" id="OWp-Lp-dqB"/>
                         <outlet property="cardTitleLabel" destination="4cN-vu-DdH" id="Oii-MO-dV8"/>
                         <outlet property="editButton" destination="H4q-Ud-THb" id="tf0-1O-a2H"/>
+                        <segue destination="TLF-mL-8XE" kind="show" identifier="EditCardView" id="uzt-48-WtE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21m-p5-f3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="660" y="3276.611694152924"/>
+        </scene>
+        <!--Edit Card View Controller-->
+        <scene sceneID="n7h-ll-se3">
+            <objects>
+                <viewController id="TLF-mL-8XE" customClass="EditCardViewController" customModule="TourPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="juN-5A-kAY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Xhy-Wx-Qcq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K2B-kB-CIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="4048"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Yq-0o-aDU">
