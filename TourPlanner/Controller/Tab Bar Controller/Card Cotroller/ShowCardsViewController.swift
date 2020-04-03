@@ -18,7 +18,7 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
     var cardID = [String]()
     var cardTitle = [String]()
     var cardPrice = [String]()
-    //var cardRating = [String]()
+    var cardRating = [String]()
     
     var cardIDForDetailsView = ""
     
@@ -48,7 +48,7 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
                         self.cardID.append(String(card.id!))
                         self.cardTitle.append(String(card.card_title!))
                         self.cardPrice.append(String(card.price_per_day!))
-                        //self.cardRating.append(String(card.card_average_rating!))
+                        self.cardRating.append(String(card.card_average_rating ?? 0))
                         if (self.cardTitle.count > 0) {
                             self.CardCollectionView!.reloadData()
                         }
@@ -69,7 +69,7 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
         let forCardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
         forCardCell.cardTitle.text = cardTitle[indexPath.item]
         forCardCell.pricePerDay.text = "$" + cardPrice[indexPath.item] + "/day"
-        //forCardCell.cardRating.text = cardRating[indexPath.item]
+        forCardCell.cardRating.text = cardRating[indexPath.item]
         forCardCell.layer.cornerRadius = 8
         forCardCell.layer.borderColor = UIColor.lightGray.cgColor
         forCardCell.layer.backgroundColor = UIColor.lightGray.cgColor
