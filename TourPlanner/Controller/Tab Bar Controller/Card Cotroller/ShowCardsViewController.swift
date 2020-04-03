@@ -71,6 +71,7 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
         
         let forCardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
         forCardCell.cardTitle.text = cardTitle[indexPath.item]
+        forCardCell.pricePerDay.text = "$" + cardPrice[indexPath.item]
         return forCardCell
     }
 
