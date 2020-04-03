@@ -20,19 +20,14 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
     var cardPrice = [String]()
     //var cardRating = [String]()
     
+    var cardIDForDetailsView = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print ("Id in show card")
         print(id as Any)
         self.CardCollectionView!.reloadData()
         self.getCardsByGuideID()
-    }
-    
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let createCardViewController = segue.destination as? CreateCardViewController {
-            createCardViewController.id = id
-        }
     }
     
     
@@ -84,5 +79,21 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
         forCardCell.layer.shadowOpacity = 0.5
         return forCardCell
     }
-
+    
+    // Function to dectect selected card in row of collectionview
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(cardID[indexPath.row])
+        cardIDForDetailsView = cardID[indexPath.row]
+        self.performSegue(withIdentifier: "CardDetailsView", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let createCardViewController = segue.destination as? CreateCardViewController {
+            createCardViewController.id = id
+        }
+        if (segue.identifier == "CardDetailsView") {
+            let vc = segue.destination as! ShowCardDetailsViewController
+            vc.cardIDReceived = self.cardIDForDetailsView
+        }
+    }
 }

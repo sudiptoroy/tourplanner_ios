@@ -478,6 +478,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="CardCollectionView" destination="LS7-qI-LcY" id="hbS-l8-G6R"/>
+                        <segue destination="W7z-XV-Ada" kind="show" identifier="CardDetailsView" id="s0Y-kS-xWR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="je8-hm-eUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -617,6 +618,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EbS-ZV-Q8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1261.5999999999999" y="3254.1229385307347"/>
+        </scene>
+        <!--Show Card Details View Controller-->
+        <scene sceneID="V1T-o7-Xxo">
+            <objects>
+                <viewController id="W7z-XV-Ada" customClass="ShowCardDetailsViewController" customModule="TourPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3X1-7p-9kd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cuS-bT-F40"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="21m-p5-f3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1929" y="3255"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Yq-0o-aDU">
