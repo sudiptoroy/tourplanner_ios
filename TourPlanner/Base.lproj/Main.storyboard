@@ -394,7 +394,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="tZx-hi-9YQ" customClass="CardCollectionViewCell" customModule="TourPlanner" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="tZx-hi-9YQ" customClass="CardCollectionViewCell" customModule="TourPlanner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -477,7 +477,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="CardCollectionView" destination="LS7-qI-LcY" id="dBE-g3-z9a"/>
+                        <outlet property="CardCollectionView" destination="LS7-qI-LcY" id="hbS-l8-G6R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="je8-hm-eUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
