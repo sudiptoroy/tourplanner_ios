@@ -19,6 +19,8 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
     var cardTitle = [String]()
     var cardPrice = [String]()
     var cardRating = [String]()
+    var serviceStatus = [String]()
+    var cardStatus = [String]()
     
     var cardIDForDetailsView = ""
     
@@ -49,6 +51,8 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
                         self.cardTitle.append(String(card.card_title!))
                         self.cardPrice.append(String(card.price_per_day!))
                         self.cardRating.append(String(card.card_average_rating ?? 0))
+                        self.serviceStatus.append(String(card.service_status!))
+                        self.cardStatus.append(String(card.card_status!))
                         if (self.cardTitle.count > 0) {
                             self.CardCollectionView!.reloadData()
                         }
@@ -70,9 +74,15 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
         forCardCell.cardTitle.text = cardTitle[indexPath.item]
         forCardCell.pricePerDay.text = "$" + cardPrice[indexPath.item] + "/day"
         forCardCell.cardRating.text = cardRating[indexPath.item]
+        
+        if (cardStatus[indexPath.item] == "1") {
+            forCardCell.statusImage.image = UIImage(named: "Active")
+        }
+        
+        
         forCardCell.layer.cornerRadius = 8
         forCardCell.layer.borderColor = UIColor.lightGray.cgColor
-        forCardCell.layer.backgroundColor = UIColor.lightGray.cgColor
+        //forCardCell.layer.backgroundColor = UIColor.lightGray.cgColor
         forCardCell.layer.shadowColor = UIColor.lightGray.cgColor
         forCardCell.layer.shadowOffset = CGSize(width: 2.0, height: 4.0)
         forCardCell.layer.shadowRadius = 2.0

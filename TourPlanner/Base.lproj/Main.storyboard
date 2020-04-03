@@ -435,8 +435,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Mp-4i-ipy">
+                                                    <rect key="frame" x="342" y="13" width="13" height="13"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="0.88151041669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="I9C-kM-Bzx" secondAttribute="trailing" constant="120" id="7lm-te-RLF"/>
                                             <constraint firstAttribute="bottom" secondItem="nIE-ee-je8" secondAttribute="bottom" constant="8" id="JTc-5u-N2N"/>
@@ -451,6 +456,7 @@
                                             <outlet property="cardRating" destination="gOd-Do-fYb" id="RIk-vH-ZB2"/>
                                             <outlet property="cardTitle" destination="I9C-kM-Bzx" id="eg5-tK-7bq"/>
                                             <outlet property="pricePerDay" destination="7MH-5j-SK5" id="7o1-s9-gxg"/>
+                                            <outlet property="statusImage" destination="4Mp-4i-ipy" id="dWB-Ez-WI2"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
