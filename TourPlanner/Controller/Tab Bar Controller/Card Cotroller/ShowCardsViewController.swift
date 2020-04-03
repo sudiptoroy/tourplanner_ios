@@ -78,7 +78,7 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
         if (cardStatus[indexPath.item] == "1") {
             forCardCell.statusImage.image = UIImage(named: "Active")
         }
-        
+        forCardCell.cardImage.image = UIImage(named: "StaticImage2")
         
         forCardCell.layer.cornerRadius = 8
         forCardCell.layer.borderColor = UIColor.lightGray.cgColor
