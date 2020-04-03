@@ -31,6 +31,7 @@ class ShowCardDetailsViewController: UIViewController {
 
     func showCardDetails () {
         let cardIDConverted = Int(cardIDReceived)
+        cardDetailsTextView.isEditable = false
         
         let param = ["id" : cardIDConverted!,
                      "api_key" : API.API_key] as [String: Any]
