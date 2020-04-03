@@ -372,7 +372,7 @@
             </objects>
             <point key="canvasLocation" x="908" y="904"/>
         </scene>
-        <!--Show Cards View Controller-->
+        <!--My Cards-->
         <scene sceneID="Tpg-v4-a8Q">
             <objects>
                 <viewController storyboardIdentifier="ShowCardsViewController" id="FUJ-eo-NzR" customClass="ShowCardsViewController" customModule="TourPlanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -469,7 +469,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="asG-lI-pdo"/>
                     </view>
-                    <navigationItem key="navigationItem" id="efI-fk-ByR">
+                    <navigationItem key="navigationItem" title="My Cards" id="efI-fk-ByR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ema-Ul-MeT">
                             <connections>
                                 <segue destination="CGP-sd-FjS" kind="show" identifier="CreateCardView" id="XoO-gb-ka8"/>

@@ -28,7 +28,7 @@ class ShowCardDetailsViewController: UIViewController {
         print("Card Id recieved: ")
         print(cardIDReceived)
         self.showCardDetails()
-        // Do any additional setup after loading the view.
+        self.title = "Card Details"
     }
     
 

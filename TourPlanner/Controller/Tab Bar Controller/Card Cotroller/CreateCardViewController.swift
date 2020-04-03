@@ -24,6 +24,7 @@ class CreateCardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Create Card"
         print("id in create card =")
         print(id as Any)
         // Do any additional setup after loading the view.
