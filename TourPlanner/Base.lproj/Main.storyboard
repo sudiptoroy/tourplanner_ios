@@ -691,6 +691,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="editButtonTapped:" destination="W7z-XV-Ada" eventType="touchUpInside" id="FFq-HZ-RoN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -710,6 +713,7 @@
                         <outlet property="cardPricePerDayLabel" destination="HDi-MJ-pzO" id="2gf-Sj-ogF"/>
                         <outlet property="cardRatingLabel" destination="FJV-nJ-9pc" id="OWp-Lp-dqB"/>
                         <outlet property="cardTitleLabel" destination="4cN-vu-DdH" id="Oii-MO-dV8"/>
+                        <outlet property="editButton" destination="H4q-Ud-THb" id="tf0-1O-a2H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21m-p5-f3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
