@@ -9,18 +9,22 @@
 import UIKit
 import Alamofire
 
-class ShowCardsViewController: UICollectionViewController {
+class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
     
     @IBOutlet weak var CardCollectionView: UICollectionView!
     var id: Int?
-    var data = [[String: Any]]()
+    var cardID = [String]()
+    var cardTitle = [String]()
+    var cardPrice = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print ("Id in show card")
         print(id as Any)
-        getCardsByGuideID()
-        // Do any additional setup after loading the view.
+        self.CardCollectionView!.reloadData()
+        self.getCardsByGuideID()
     }
     
 
@@ -30,31 +34,44 @@ class ShowCardsViewController: UICollectionViewController {
         }
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
-    }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CardCollectionViewCell
-        return cell
-    }
+    // ============== Get All Cards By Guide Id =====================
     
     func getCardsByGuideID () {
-        let param = ["id": id as Any,
-                     "api_key": API.API_key]
+        let param = ["guide_id": id!,
+                     "api_key": API.API_key] as [String: Any]
         
+        // Calling getCardsByGuideID API
         Alamofire.request(API.baseURL + "/cards/ByGuideID", method: .post, parameters: param).validate().responseJSON {
             response in
             
-            do {
-                //let createCardResponse = try JSONDecoder().decode(CreateCard.self, from: response.data!)
-                let getCardByGuideResponse = try JSONDecoder().decode(CardByGuide.self, from: response.data!)
-                print(getCardByGuideResponse)
-                
-            } catch {
-                print("Error While parsing Json")
+            if ((response.result.value != nil)) {
+                do {
+                    let getCardByGuideResponse = try JSONDecoder().decode(CardByGuide.self, from: response.data!)
+                    for card in getCardByGuideResponse.data {
+                        self.cardID.append(String(card.id!))
+                        self.cardTitle.append(String(card.card_title!))
+                        self.cardPrice.append(String(card.price_per_day!))
+                        if (self.cardTitle.count > 0) {
+                            self.CardCollectionView!.reloadData()
+                        }
+                    }
+                } catch {
+                    print("Error While Card Json Data")
+                }
             }
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return cardTitle.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let forCardCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
+        forCardCell.cardTitle.text = cardTitle[indexPath.item]
+        return forCardCell
     }
 
 }
