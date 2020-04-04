@@ -41,7 +41,21 @@ class EditCardViewController: UIViewController {
         print("Service Status: \(String(describing: serviceStatusReceived))")
         print("Card Status: \(String(describing: cardStatusReceived))")
         print("Card Tags: \(String(describing: cardTagsReceived))")
-        // Do any additional setup after loading the view.
+        
+        
+        self.cardCurrentState()
+    }
+    
+    
+    func cardCurrentState () {
+        self.cardTitle.text = cardTitleReceived
+        self.cardDescription.text = cardDescriptionReceived
+        self.pricePerDay.text = String(pricePerDayReceived!)
+        self.place.text = placeIDsReceived
+        self.cardCategoryTags.text = cardTagsReceived
+//        if (self.cardStatusReceived == 1) {
+//
+//        }
     }
 
 }
