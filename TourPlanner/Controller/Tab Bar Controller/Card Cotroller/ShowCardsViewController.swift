@@ -80,6 +80,12 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
         } else if (cardStatus[indexPath.item] == "0") {
             forCardCell.statusImage.image = UIImage(named: "Inactive")
         }
+        
+        if (serviceStatus[indexPath.item] == "1") {
+            forCardCell.serviceStatus.backgroundColor = UIColor.darkGray
+            forCardCell.serviceStatus.layer.cornerRadius = 8
+            forCardCell.serviceStatus.text = "Engaged"
+        }
         forCardCell.cardImage.image = UIImage(named: "StaticImage2")
         
         forCardCell.layer.cornerRadius = 8

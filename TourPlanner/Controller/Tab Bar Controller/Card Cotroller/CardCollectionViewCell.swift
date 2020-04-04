@@ -14,5 +14,5 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var pricePerDay: UILabel!
     @IBOutlet weak var statusImage: UIImageView!
     @IBOutlet weak var cardImage: UIImageView!
-    
+    @IBOutlet weak var serviceStatus: UILabel!
 }
