@@ -112,6 +112,7 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
         if (segue.identifier == "CardDetailsView") {
             let vc = segue.destination as! ShowCardDetailsViewController
             vc.cardIDReceived = self.cardIDForDetailsView
+            vc.guidIDReceived = self.id
         }
     }
 }

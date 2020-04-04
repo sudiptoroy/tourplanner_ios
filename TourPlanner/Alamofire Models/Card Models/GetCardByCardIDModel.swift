@@ -23,6 +23,7 @@ struct CardByIDDetails: Decodable {
     let place_ids: String?
     let card_average_rating: Double?
     let service_status: Int?
+    let card_status: Int?
     let card_category_tags: String?
     
 }

@@ -21,12 +21,22 @@ class ShowCardDetailsViewController: UIViewController {
     
     
     var cardIDReceived = ""
+    var guidIDReceived : Int?
+    var cardTitle: String?
+    var cardDescription: String?
+    var cardPricePerDay: Int?
+    var placeIDs: String?
+    var cardRating: Double?
     var serviceStatus: Int?
+    var cardStatus: Int?
+    var cardTags: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Card Id recieved: ")
         print(cardIDReceived)
+        print("Guide Id received")
+        print(guidIDReceived as Any)
         self.showCardDetails()
         self.title = "Card Details"
     }
@@ -45,12 +55,14 @@ class ShowCardDetailsViewController: UIViewController {
             if ((response.result.value) != nil) {
                 do {
                     let getCardByCardIDResponse = try JSONDecoder().decode(CardByID.self, from: response.data!)
-                    let cardTitle = getCardByCardIDResponse.data[0].card_title
-                    let cardDescription = getCardByCardIDResponse.data[0].card_description
-                    let cardRating = getCardByCardIDResponse.data[0].card_average_rating
-                    let cardPricePerDay = getCardByCardIDResponse.data[0].price_per_day
+                    self.cardTitle = getCardByCardIDResponse.data[0].card_title
+                    self.cardDescription = getCardByCardIDResponse.data[0].card_description
+                    self.cardRating = getCardByCardIDResponse.data[0].card_average_rating
+                    self.cardPricePerDay = getCardByCardIDResponse.data[0].price_per_day
+                    self.placeIDs = getCardByCardIDResponse.data[0].place_ids
                     self.serviceStatus = getCardByCardIDResponse.data[0].service_status
-                    
+                    self.cardStatus = getCardByCardIDResponse.data[0].card_status
+                    self.cardTags = getCardByCardIDResponse.data[0].card_category_tags
                     // If the Card is engaged then change the button color to light gray
                     if (self.serviceStatus == 1) {
                         self.editButton.backgroundColor = UIColor.lightGray
@@ -59,10 +71,10 @@ class ShowCardDetailsViewController: UIViewController {
                     //print(getCardByCardIDResponse)
                     
                     // Show in the UI
-                    self.cardTitleLabel.text = cardTitle
-                    self.cardDetailsTextView.text = cardDescription
-                    self.cardPricePerDayLabel.text = "$" + String(cardPricePerDay!) + "/Day"
-                    self.cardRatingLabel.text = String(cardRating ?? 0)
+                    self.cardTitleLabel.text = self.cardTitle
+                    self.cardDetailsTextView.text = self.cardDescription
+                    self.cardPricePerDayLabel.text = "$" + String(self.cardPricePerDay!) + "/Day"
+                    self.cardRatingLabel.text = String(self.cardRating ?? 0)
                     
                 } catch {
                     print("Error while parsing Json for GetCardByCardID")
@@ -83,6 +95,14 @@ class ShowCardDetailsViewController: UIViewController {
         if (segue.identifier == "EditCardView") {
             let vc = segue.destination as! EditCardViewController
             vc.cardIDReceived = self.cardIDReceived
+            vc.guideIDReceived = self.guidIDReceived
+            vc.cardTitleReceived = self.cardTitle
+            vc.cardDescriptionReceived = self.cardDescription
+            vc.pricePerDayReceived = self.cardPricePerDay
+            vc.placeIDsReceived = self.placeIDs
+            vc.serviceStatusReceived = self.serviceStatus
+            vc.cardStatusReceived = self.cardStatus
+            vc.cardTagsReceived = self.cardTags
         }
     }
     
