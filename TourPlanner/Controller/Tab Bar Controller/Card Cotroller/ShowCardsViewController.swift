@@ -77,6 +77,8 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
         
         if (cardStatus[indexPath.item] == "1") {
             forCardCell.statusImage.image = UIImage(named: "Active")
+        } else if (cardStatus[indexPath.item] == "0") {
+            forCardCell.statusImage.image = UIImage(named: "Inactive")
         }
         forCardCell.cardImage.image = UIImage(named: "StaticImage2")
         
