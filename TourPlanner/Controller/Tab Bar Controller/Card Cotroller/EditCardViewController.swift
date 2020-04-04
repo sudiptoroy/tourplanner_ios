@@ -53,9 +53,11 @@ class EditCardViewController: UIViewController {
         self.pricePerDay.text = String(pricePerDayReceived!)
         self.place.text = placeIDsReceived
         self.cardCategoryTags.text = cardTagsReceived
-//        if (self.cardStatusReceived == 1) {
-//
-//        }
+        if (self.cardStatusReceived == 1) {
+            cardStatusSwitch.setOn(true, animated: false)
+        } else if (self.cardStatusReceived == 0) {
+            cardStatusSwitch.setOn(false, animated: false)
+        }
     }
 
 }
