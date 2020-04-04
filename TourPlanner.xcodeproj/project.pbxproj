@@ -18,6 +18,7 @@
 		36102FED24068DBD0009F61C /* TourPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36102FEC24068DBD0009F61C /* TourPlannerUITests.swift */; };
 		481DE37E241CFBC7006B0D64 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DE37D241CFBC7006B0D64 /* API.swift */; };
 		481DE381241D008C006B0D64 /* GuideLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DE380241D008C006B0D64 /* GuideLoginModel.swift */; };
+		481EA8E8243891EA00EEC260 /* UpdateCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EA8E7243891EA00EEC260 /* UpdateCardModel.swift */; };
 		48225A662434A1F3007DAF3A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48225A652434A1F3007DAF3A /* HomeViewController.swift */; };
 		48225A682434A3E6007DAF3A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48225A672434A3E6007DAF3A /* MainTabBarController.swift */; };
 		48225A6C2434C310007DAF3A /* GuideProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48225A6B2434C310007DAF3A /* GuideProfileModel.swift */; };
@@ -70,6 +71,7 @@
 		36102FEE24068DBD0009F61C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		481DE37D241CFBC7006B0D64 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		481DE380241D008C006B0D64 /* GuideLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideLoginModel.swift; sourceTree = "<group>"; };
+		481EA8E7243891EA00EEC260 /* UpdateCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCardModel.swift; sourceTree = "<group>"; };
 		48225A652434A1F3007DAF3A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		48225A672434A3E6007DAF3A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		48225A6B2434C310007DAF3A /* GuideProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideProfileModel.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				48F4F79D24360322005B8571 /* GetCardByGuideModel.swift */,
 				48F4F7952435A412005B8571 /* CreatCardModel.swift */,
 				48593BD92437348400E87A8F /* GetCardByCardIDModel.swift */,
+				481EA8E7243891EA00EEC260 /* UpdateCardModel.swift */,
 			);
 			path = "Card Models";
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				48F4F7982435AEE4005B8571 /* CardNavigationCrontroller.swift in Sources */,
 				36102FCA24068DB60009F61C /* AppDelegate.swift in Sources */,
 				481DE37E241CFBC7006B0D64 /* API.swift in Sources */,
+				481EA8E8243891EA00EEC260 /* UpdateCardModel.swift in Sources */,
 				48593BDD243755F100E87A8F /* EditCardViewController.swift in Sources */,
 				48225A6C2434C310007DAF3A /* GuideProfileModel.swift in Sources */,
 				4853BA25241E29610049C5FA /* PendingProfileViewController.swift in Sources */,
