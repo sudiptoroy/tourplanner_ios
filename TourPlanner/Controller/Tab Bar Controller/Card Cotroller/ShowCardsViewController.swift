@@ -100,8 +100,10 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
             forCardCell.statusImage.image = UIImage(named: "Inactive")
         }
         
+        // Set default label status
+        forCardCell.serviceStatus.text = ""
+        
         if (serviceStatus[indexPath.item] == "1") {
-            forCardCell.serviceStatus.backgroundColor = UIColor.darkGray
             forCardCell.serviceStatus.layer.cornerRadius = 8
             forCardCell.serviceStatus.text = "Engaged"
         }
