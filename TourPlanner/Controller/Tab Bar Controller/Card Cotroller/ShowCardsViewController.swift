@@ -28,10 +28,17 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
         super.viewDidLoad()
         print ("Id in show card")
         print(id as Any)
-        self.CardCollectionView!.reloadData()
+        //self.CardCollectionView!.reloadData()
         self.getCardsByGuideID()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewDidLoad()
+        //self.CardCollectionView!.reloadData()
+        //getCardsByGuideID()
+    }
+
     
     // ============== Get All Cards By Guide Id =====================
     
@@ -46,17 +53,29 @@ class ShowCardsViewController: UIViewController, UICollectionViewDelegate, UICol
             if ((response.result.value != nil)) {
                 do {
                     let getCardByGuideResponse = try JSONDecoder().decode(CardByGuide.self, from: response.data!)
+                    
+                    // Empty array before appending
+                    self.cardID.removeAll()
+                    self.cardTitle.removeAll()
+                    self.cardPrice.removeAll()
+                    self.cardRating.removeAll()
+                    self.serviceStatus.removeAll()
+                    self.cardStatus.removeAll()
+                    
                     for card in getCardByGuideResponse.data {
                         self.cardID.append(String(card.id!))
                         self.cardTitle.append(String(card.card_title!))
+                        print("Card Title \(self.cardTitle)")
                         self.cardPrice.append(String(card.price_per_day!))
                         self.cardRating.append(String(card.card_average_rating ?? 0))
                         self.serviceStatus.append(String(card.service_status!))
                         self.cardStatus.append(String(card.card_status!))
-                        if (self.cardTitle.count > 0) {
-                            self.CardCollectionView!.reloadData()
-                        }
                     }
+                    
+                    if (self.cardTitle.count > 0) {
+                        self.CardCollectionView!.reloadData()
+                    }
+                    
                 } catch {
                     print("Error While Card Json Data")
                 }

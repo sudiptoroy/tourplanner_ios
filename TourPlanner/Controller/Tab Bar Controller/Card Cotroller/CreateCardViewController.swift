@@ -89,7 +89,14 @@ class CreateCardViewController: UIViewController {
     // Function to display alert message
     func displayAlertMessage(_ title: String,_ userMessage: String) {
         let userAlert = UIAlertController(title: title, message:  userMessage, preferredStyle: UIAlertController.Style.alert)
-        let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default)
+//        {
+//            action in
+//            
+//            let showCardViewController = ShowCardsViewController()
+//            showCardViewController.id = self.id
+//            self.present(showCardViewController, animated: true, completion: nil)
+//        }
         userAlert.addAction(okAction)
         self.present(userAlert, animated: true, completion: nil)
     }
