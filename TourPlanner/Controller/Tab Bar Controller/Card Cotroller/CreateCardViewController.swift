@@ -46,6 +46,7 @@ class CreateCardViewController: UIViewController {
                      "card_description" : cardDetails!,
                      "price_per_day" : pricePerDay!,
                      "place_ids" : selectPlace!,
+                     "card_average_rating" : 0.0,
                      "service_status" : 0,
                      "card_status" : 1,
                      "card_category_tags" : cardTags!,
