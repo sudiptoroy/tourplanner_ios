@@ -9,12 +9,16 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    var guide_id: Int?
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileName: UILabel!
     @IBOutlet weak var rating: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("\nGuide ID in ProfileViewController: \(String(describing: guide_id))")
         // Do any additional setup after loading the view.
     }
     

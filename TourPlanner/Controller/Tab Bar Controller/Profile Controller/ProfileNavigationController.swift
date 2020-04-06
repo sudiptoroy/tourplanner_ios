@@ -9,10 +9,12 @@
 import UIKit
 
 class ProfileNavigationController: UINavigationController {
+    
+    var guide_id: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print ("Guide id in ProfileNavigation \(String(describing: guide_id))")
         // Do any additional setup after loading the view.
     }
 

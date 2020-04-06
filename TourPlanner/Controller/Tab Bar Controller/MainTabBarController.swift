@@ -30,6 +30,12 @@ class MainTabBarController: UITabBarController {
                     showCardsViewController.id = id
                 }
             }
+            
+            if let profileNavigationController = viewController as? ProfileNavigationController {
+                if let profileViewController = profileNavigationController.viewControllers.first as? ProfileViewController {
+                    profileViewController.guide_id = id
+                }
+            }
         }
     }
 }
