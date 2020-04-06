@@ -16,6 +16,8 @@
 		36102FD724068DBD0009F61C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36102FD524068DBD0009F61C /* LaunchScreen.storyboard */; };
 		36102FE224068DBD0009F61C /* TourPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36102FE124068DBD0009F61C /* TourPlannerTests.swift */; };
 		36102FED24068DBD0009F61C /* TourPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36102FEC24068DBD0009F61C /* TourPlannerUITests.swift */; };
+		4803567B243B409F00FAE4FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4803567A243B409F00FAE4FE /* ProfileViewController.swift */; };
+		4803567D243B419100FAE4FE /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4803567C243B419100FAE4FE /* ProfileNavigationController.swift */; };
 		481DE37E241CFBC7006B0D64 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DE37D241CFBC7006B0D64 /* API.swift */; };
 		481DE381241D008C006B0D64 /* GuideLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481DE380241D008C006B0D64 /* GuideLoginModel.swift */; };
 		481EA8E8243891EA00EEC260 /* UpdateCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EA8E7243891EA00EEC260 /* UpdateCardModel.swift */; };
@@ -69,6 +71,8 @@
 		36102FE824068DBD0009F61C /* TourPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TourPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36102FEC24068DBD0009F61C /* TourPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourPlannerUITests.swift; sourceTree = "<group>"; };
 		36102FEE24068DBD0009F61C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4803567A243B409F00FAE4FE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4803567C243B419100FAE4FE /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		481DE37D241CFBC7006B0D64 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		481DE380241D008C006B0D64 /* GuideLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideLoginModel.swift; sourceTree = "<group>"; };
 		481EA8E7243891EA00EEC260 /* UpdateCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCardModel.swift; sourceTree = "<group>"; };
@@ -194,6 +198,15 @@
 			path = TourPlannerUITests;
 			sourceTree = "<group>";
 		};
+		48035679243B404000FAE4FE /* Profile Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4803567A243B409F00FAE4FE /* ProfileViewController.swift */,
+				4803567C243B419100FAE4FE /* ProfileNavigationController.swift */,
+			);
+			path = "Profile Controller";
+			sourceTree = "<group>";
+		};
 		481DE37C241CFB98006B0D64 /* Static Functions */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +229,7 @@
 			children = (
 				48225A652434A1F3007DAF3A /* HomeViewController.swift */,
 				48225A672434A3E6007DAF3A /* MainTabBarController.swift */,
+				48035679243B404000FAE4FE /* Profile Controller */,
 				48F4F79224359730005B8571 /* Card Cotroller */,
 			);
 			path = "Tab Bar Controller";
@@ -480,9 +494,11 @@
 				48F4F79E24360322005B8571 /* GetCardByGuideModel.swift in Sources */,
 				36102FCC24068DB60009F61C /* ViewController.swift in Sources */,
 				48F4F7962435A412005B8571 /* CreatCardModel.swift in Sources */,
+				4803567B243B409F00FAE4FE /* ProfileViewController.swift in Sources */,
 				48F4F7982435AEE4005B8571 /* CardNavigationCrontroller.swift in Sources */,
 				36102FCA24068DB60009F61C /* AppDelegate.swift in Sources */,
 				481DE37E241CFBC7006B0D64 /* API.swift in Sources */,
+				4803567D243B419100FAE4FE /* ProfileNavigationController.swift in Sources */,
 				481EA8E8243891EA00EEC260 /* UpdateCardModel.swift in Sources */,
 				48593BDD243755F100E87A8F /* EditCardViewController.swift in Sources */,
 				48225A6C2434C310007DAF3A /* GuideProfileModel.swift in Sources */,

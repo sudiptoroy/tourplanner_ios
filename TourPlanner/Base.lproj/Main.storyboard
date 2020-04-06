@@ -915,7 +915,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ioo-L4-FmH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Message" selectedImage="Message" id="6LC-hD-eqM"/>
+                    <tabBarItem key="tabBarItem" title="" image="Tourist" selectedImage="Tourist" id="6LC-hD-eqM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9j-0H-I6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -937,21 +937,58 @@
             </objects>
             <point key="canvasLocation" x="2558" y="1760"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="pMD-1q-DAC">
             <objects>
-                <viewController id="N1A-Ju-IkZ" sceneMemberID="viewController">
+                <viewController id="N1A-Ju-IkZ" customClass="ProfileViewController" customModule="TourPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RTC-hP-aqC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="16" affinity="minX"/>
+                            <userLayoutGuide location="359" affinity="minX"/>
+                        </userGuides>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StaticImage2" translatesAutoresizingMaskIntoConstraints="NO" id="iWb-yQ-n2f">
+                                <rect key="frame" x="-1" y="62" width="376" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D2B-5N-zC9">
+                                <rect key="frame" x="16" y="195" width="94" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkb-6b-9qN">
+                                <rect key="frame" x="126" y="247" width="234" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="ltq-i1-Nsr">
+                                <rect key="frame" x="126" y="272" width="14" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZk-bL-Srb">
+                                <rect key="frame" x="143" y="271" width="71" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="oa5-ln-jf4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Profile" selectedImage="Profile" id="PjO-tR-Q8a"/>
+                    <navigationItem key="navigationItem" title="Profile" id="7wN-Tl-4yC"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="D2B-5N-zC9" id="EFl-LS-yDO"/>
+                        <outlet property="profileName" destination="mkb-6b-9qN" id="nuY-va-CzE"/>
+                        <outlet property="rating" destination="YZk-bL-Srb" id="npu-SG-2JD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bjk-6Y-UGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3201" y="1760"/>
+            <point key="canvasLocation" x="3200.8000000000002" y="2515.5922038980511"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="kC5-CY-uhs">
@@ -1051,7 +1088,7 @@
                         <segue destination="PvD-5A-Vwm" kind="relationship" relationship="viewControllers" id="gIf-3K-JJz"/>
                         <segue destination="bib-dK-pUB" kind="relationship" relationship="viewControllers" id="tza-Hr-Dx0"/>
                         <segue destination="ihv-Fq-stf" kind="relationship" relationship="viewControllers" id="mav-VS-Vcm"/>
-                        <segue destination="N1A-Ju-IkZ" kind="relationship" relationship="viewControllers" id="gIz-gM-e2u"/>
+                        <segue destination="RdJ-5V-dmb" kind="relationship" relationship="viewControllers" id="gIz-gM-e2u"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qx-my-IV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1095,15 +1132,35 @@
             </objects>
             <point key="canvasLocation" x="1261.5999999999999" y="1759.9700149925038"/>
         </scene>
+        <!--Profile Navigation Controller-->
+        <scene sceneID="6Gi-WR-w0d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RdJ-5V-dmb" customClass="ProfileNavigationController" customModule="TourPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Profile" selectedImage="Profile" id="PjO-tR-Q8a"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zGP-mr-wHu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="N1A-Ju-IkZ" kind="relationship" relationship="rootViewController" id="NNw-Db-MwO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIS-sB-WYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3200.8000000000002" y="1759.9700149925038"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Card" width="21" height="15"/>
         <image name="Home" width="21" height="21"/>
         <image name="Logo" width="100" height="100"/>
-        <image name="Message" width="21" height="15"/>
         <image name="Notification" width="18" height="21"/>
         <image name="Profile" width="18" height="21"/>
         <image name="Star" width="15" height="14"/>
+        <image name="StaticImage2" width="960" height="540"/>
+        <image name="Tourist" width="19" height="21"/>
         <image name="Unicorn" width="139" height="154"/>
         <image name="Vector" width="20" height="20"/>
     </resources>
