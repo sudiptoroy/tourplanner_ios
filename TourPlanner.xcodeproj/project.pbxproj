@@ -24,6 +24,9 @@
 		48225A662434A1F3007DAF3A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48225A652434A1F3007DAF3A /* HomeViewController.swift */; };
 		48225A682434A3E6007DAF3A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48225A672434A3E6007DAF3A /* MainTabBarController.swift */; };
 		48225A6C2434C310007DAF3A /* GuideProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48225A6B2434C310007DAF3A /* GuideProfileModel.swift */; };
+		4828A92A243C88D700709D85 /* MyTourNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4828A929243C88D700709D85 /* MyTourNavigationController.swift */; };
+		4828A92D243C891900709D85 /* TouristGuideRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4828A92C243C891900709D85 /* TouristGuideRelation.swift */; };
+		4828A92F243C896400709D85 /* MyTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4828A92E243C896400709D85 /* MyTourViewController.swift */; };
 		4853BA25241E29610049C5FA /* PendingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4853BA24241E29610049C5FA /* PendingProfileViewController.swift */; };
 		48593BD824370F6700E87A8F /* ShowCardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48593BD724370F6700E87A8F /* ShowCardDetailsViewController.swift */; };
 		48593BDA2437348400E87A8F /* GetCardByCardIDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48593BD92437348400E87A8F /* GetCardByCardIDModel.swift */; };
@@ -79,6 +82,9 @@
 		48225A652434A1F3007DAF3A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		48225A672434A3E6007DAF3A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		48225A6B2434C310007DAF3A /* GuideProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideProfileModel.swift; sourceTree = "<group>"; };
+		4828A929243C88D700709D85 /* MyTourNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTourNavigationController.swift; sourceTree = "<group>"; };
+		4828A92C243C891900709D85 /* TouristGuideRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristGuideRelation.swift; sourceTree = "<group>"; };
+		4828A92E243C896400709D85 /* MyTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTourViewController.swift; sourceTree = "<group>"; };
 		4853BA24241E29610049C5FA /* PendingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingProfileViewController.swift; sourceTree = "<group>"; };
 		48593BD724370F6700E87A8F /* ShowCardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCardDetailsViewController.swift; sourceTree = "<group>"; };
 		48593BD92437348400E87A8F /* GetCardByCardIDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCardByCardIDModel.swift; sourceTree = "<group>"; };
@@ -201,8 +207,8 @@
 		48035679243B404000FAE4FE /* Profile Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4803567A243B409F00FAE4FE /* ProfileViewController.swift */,
 				4803567C243B419100FAE4FE /* ProfileNavigationController.swift */,
+				4803567A243B409F00FAE4FE /* ProfileViewController.swift */,
 			);
 			path = "Profile Controller";
 			sourceTree = "<group>";
@@ -218,6 +224,7 @@
 		481DE37F241D0011006B0D64 /* Alamofire Models */ = {
 			isa = PBXGroup;
 			children = (
+				4828A92B243C88F300709D85 /* TouristGuideRelation Models */,
 				48593BD62436EDA500E87A8F /* Guide Models */,
 				48593BD52436ED8200E87A8F /* Card Models */,
 			);
@@ -229,10 +236,28 @@
 			children = (
 				48225A652434A1F3007DAF3A /* HomeViewController.swift */,
 				48225A672434A3E6007DAF3A /* MainTabBarController.swift */,
-				48035679243B404000FAE4FE /* Profile Controller */,
 				48F4F79224359730005B8571 /* Card Cotroller */,
+				4828A928243C6A4600709D85 /* MyTour Controller */,
+				48035679243B404000FAE4FE /* Profile Controller */,
 			);
 			path = "Tab Bar Controller";
+			sourceTree = "<group>";
+		};
+		4828A928243C6A4600709D85 /* MyTour Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4828A929243C88D700709D85 /* MyTourNavigationController.swift */,
+				4828A92E243C896400709D85 /* MyTourViewController.swift */,
+			);
+			path = "MyTour Controller";
+			sourceTree = "<group>";
+		};
+		4828A92B243C88F300709D85 /* TouristGuideRelation Models */ = {
+			isa = PBXGroup;
+			children = (
+				4828A92C243C891900709D85 /* TouristGuideRelation.swift */,
+			);
+			path = "TouristGuideRelation Models";
 			sourceTree = "<group>";
 		};
 		48593BD52436ED8200E87A8F /* Card Models */ = {
@@ -489,8 +514,10 @@
 				48F4F79A2435B051005B8571 /* ShowCardsViewController.swift in Sources */,
 				48F4F79424359788005B8571 /* CreateCardViewController.swift in Sources */,
 				36102FD224068DB60009F61C /* TourPlanner.xcdatamodeld in Sources */,
+				4828A92A243C88D700709D85 /* MyTourNavigationController.swift in Sources */,
 				48F4F79C2435F6D8005B8571 /* CardCollectionViewCell.swift in Sources */,
 				48225A662434A1F3007DAF3A /* HomeViewController.swift in Sources */,
+				4828A92F243C896400709D85 /* MyTourViewController.swift in Sources */,
 				48F4F79E24360322005B8571 /* GetCardByGuideModel.swift in Sources */,
 				36102FCC24068DB60009F61C /* ViewController.swift in Sources */,
 				48F4F7962435A412005B8571 /* CreatCardModel.swift in Sources */,
@@ -503,6 +530,7 @@
 				48593BDD243755F100E87A8F /* EditCardViewController.swift in Sources */,
 				48225A6C2434C310007DAF3A /* GuideProfileModel.swift in Sources */,
 				4853BA25241E29610049C5FA /* PendingProfileViewController.swift in Sources */,
+				4828A92D243C891900709D85 /* TouristGuideRelation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

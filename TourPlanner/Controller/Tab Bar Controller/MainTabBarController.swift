@@ -36,6 +36,12 @@ class MainTabBarController: UITabBarController {
                     profileViewController.guide_id = id
                 }
             }
+            
+            if let myTourNavigationController = viewController as? MyTourNavigationController {
+                if let myTourViewController = myTourNavigationController.viewControllers.first as? MyTourViewController {
+                    myTourViewController.guide_id = id
+                }
+            }
         }
     }
 }
