@@ -17,5 +17,7 @@ class MyTourViewController: UIViewController {
         print("\n Guide ID in My tour View: \(String(describing: guide_id))")
         // Do any additional setup after loading the view.
     }
+    
+    
 
 }
