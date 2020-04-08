@@ -122,16 +122,16 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTourTableViewCell", for: indexPath) as! MyTourTableViewCell
         
         cell.cardImage.image = UIImage(named: "StaticImage2")
-        cell.cardTitle.text = cardTitle[indexPath.item]
-        cell.price.text = cardPrice[indexPath.item]
+        cell.cardTitle.text = cardTitle[indexPath.row]
+        cell.price.text = cardPrice[indexPath.row]
         
-        if (isAccepted[indexPath.item] == "0" && isComplited[indexPath.item] == "0") {
-            cell.statusLabel.text = "requested"
-        } else if (isAccepted[indexPath.item] == "1" && isComplited[indexPath.item] == "0") {
+        if (isAccepted[indexPath.row] == "0" && isComplited[indexPath.row] == "0") {
+            cell.statusLabel.text = "Requested"
+        } else if (isAccepted[indexPath.row] == "1" && isComplited[indexPath.row] == "0") {
             cell.statusLabel.text = "On Going"
-        } else if (isComplited[indexPath.item] == "1") {
+        } else if (isComplited[indexPath.row] == "1") {
             cell.statusLabel.text = "Completed"
-        } else if (isCancelledByTourist[indexPath.item] == "1" || isCancelledByGuide[indexPath.item] == "1") {
+        } else if (isCancelledByTourist[indexPath.row] == "1" || isCancelledByGuide[indexPath.row] == "1") {
             cell.statusLabel.text = "Cancelled"
         }
         
