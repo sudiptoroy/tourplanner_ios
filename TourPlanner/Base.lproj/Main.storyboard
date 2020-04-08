@@ -515,7 +515,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="je8-hm-eUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260" y="2504.7976011994006"/>
+            <point key="canvasLocation" x="1106" y="2519"/>
         </scene>
         <!--Create Card View Controller-->
         <scene sceneID="Sot-9z-g2F">
@@ -650,7 +650,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EbS-ZV-Q8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1302" y="3278"/>
+            <point key="canvasLocation" x="1145" y="3293"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="txw-MC-jyU">
+            <objects>
+                <viewController id="WXS-gY-C66" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5WI-g5-1B8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="16" affinity="minX"/>
+                            <userLayoutGuide location="359" affinity="minX"/>
+                        </userGuides>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c77-L1-3JL">
+                                <rect key="frame" x="16" y="78" width="343" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yz9-8W-0f7">
+                                <rect key="frame" x="17" y="261" width="262" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pQn-ha-yWG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dU8-7U-2hw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1901.5999999999999" y="3291.9040479760124"/>
         </scene>
         <!--Show Card Details View Controller-->
         <scene sceneID="V1T-o7-Xxo">
@@ -752,7 +784,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21m-p5-f3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="3276.611694152924"/>
+            <point key="canvasLocation" x="428" y="3291"/>
         </scene>
         <!--Edit Card View Controller-->
         <scene sceneID="n7h-ll-se3">
@@ -903,7 +935,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K2B-kB-CIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="661.60000000000002" y="4047.5262368815597"/>
+            <point key="canvasLocation" x="428" y="4031"/>
         </scene>
         <!--My Tours-->
         <scene sceneID="3Yq-0o-aDU">
@@ -973,6 +1005,7 @@
                     <navigationItem key="navigationItem" title="My Tours" id="OI3-Rs-JcK"/>
                     <connections>
                         <outlet property="myTourTableView" destination="wKi-sm-ET2" id="8qx-Sg-pI4"/>
+                        <segue destination="WXS-gY-C66" kind="show" id="vFm-q0-fSl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9j-0H-I6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -993,7 +1026,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQ0-7b-IPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2556" y="1760"/>
+            <point key="canvasLocation" x="2697" y="1762"/>
         </scene>
         <!--Profile-->
         <scene sceneID="pMD-1q-DAC">
@@ -1046,7 +1079,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bjk-6Y-UGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3200.8000000000002" y="2515.5922038980511"/>
+            <point key="canvasLocation" x="3502" y="2514"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="kC5-CY-uhs">
@@ -1130,7 +1163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Et2-Jo-RGo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="628" y="1760.8695652173915"/>
+            <point key="canvasLocation" x="369" y="1761"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="gkG-ce-60b">
@@ -1188,7 +1221,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTt-v4-dJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1261.5999999999999" y="1759.9700149925038"/>
+            <point key="canvasLocation" x="1105" y="1758"/>
         </scene>
         <!--Profile Navigation Controller-->
         <scene sceneID="6Gi-WR-w0d">
@@ -1207,7 +1240,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIS-sB-WYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3199" y="1760"/>
+            <point key="canvasLocation" x="3500" y="1762"/>
         </scene>
         <!--My Tour Navigation Controller-->
         <scene sceneID="YuI-Vb-jAB">
