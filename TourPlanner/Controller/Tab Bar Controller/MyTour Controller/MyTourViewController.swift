@@ -35,6 +35,7 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.getTourGuideRelationByGuideID()
         myTourTableView.delegate = self
         myTourTableView.dataSource = self
+        myTourTableView.reloadData()
     }
     
     
@@ -59,6 +60,18 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if (self.check) {
                 do {
                     let getTouristGuideRelation = try JSONDecoder().decode(TouristGuideRelation.self, from: response.data!)
+                    
+                    self.id.removeAll()
+                    self.cardID.removeAll()
+                    self.cardTitle.removeAll()
+                    self.cardPrice.removeAll()
+                    self.touristsID.removeAll()
+                    self.isAccepted.removeAll()
+                    self.isComplited.removeAll()
+                    self.isCancelledByTourist.removeAll()
+                    self.isCancelledByGuide.removeAll()
+                    self.createdAt.removeAll()
+                    self.updatedAt.removeAll()
             
                     for relation in getTouristGuideRelation.data {
                         print(relation.card_id!)
@@ -85,12 +98,12 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                 //print("Card Title = \(String(describing: getCardDetails.data[0].card_title))")
                                 self.cardTitle.append(getCardDetails.data[0].card_title!)
                                 self.cardPrice.append(String(getCardDetails.data[0].price_per_day!))
+                                if (self.cardTitle.count > 0) {
+                                    self.myTourTableView?.reloadData()
+                                }
                             } catch {
                                 print("Error while parsing json of card api response")
                             }
-                        }
-                        if (self.id.count > 0) {
-                            self.myTourTableView!.reloadData()
                         }
                     }
                 } catch {
