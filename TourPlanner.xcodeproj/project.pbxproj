@@ -34,6 +34,7 @@
 		48D293642418CEBA0010F4F8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293632418CEBA0010F4F8 /* Constants.swift */; };
 		48D293672418D1CA0010F4F8 /* TButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293662418D1CA0010F4F8 /* TButton.swift */; };
 		48D293692418D1DC0010F4F8 /* TTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D293682418D1DC0010F4F8 /* TTextField.swift */; };
+		48D82199243DA24F00E78C50 /* MyTourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D82198243DA24F00E78C50 /* MyTourTableViewCell.swift */; };
 		48F4F79424359788005B8571 /* CreateCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F4F79324359788005B8571 /* CreateCardViewController.swift */; };
 		48F4F7962435A412005B8571 /* CreatCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F4F7952435A412005B8571 /* CreatCardModel.swift */; };
 		48F4F7982435AEE4005B8571 /* CardNavigationCrontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F4F7972435AEE4005B8571 /* CardNavigationCrontroller.swift */; };
@@ -92,6 +93,7 @@
 		48D293632418CEBA0010F4F8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		48D293662418D1CA0010F4F8 /* TButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TButton.swift; sourceTree = "<group>"; };
 		48D293682418D1DC0010F4F8 /* TTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTextField.swift; sourceTree = "<group>"; };
+		48D82198243DA24F00E78C50 /* MyTourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTourTableViewCell.swift; sourceTree = "<group>"; };
 		48F4F79324359788005B8571 /* CreateCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCardViewController.swift; sourceTree = "<group>"; };
 		48F4F7952435A412005B8571 /* CreatCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatCardModel.swift; sourceTree = "<group>"; };
 		48F4F7972435AEE4005B8571 /* CardNavigationCrontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNavigationCrontroller.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			children = (
 				4828A929243C88D700709D85 /* MyTourNavigationController.swift */,
 				4828A92E243C896400709D85 /* MyTourViewController.swift */,
+				48D82198243DA24F00E78C50 /* MyTourTableViewCell.swift */,
 			);
 			path = "MyTour Controller";
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				48225A682434A3E6007DAF3A /* MainTabBarController.swift in Sources */,
 				48D293672418D1CA0010F4F8 /* TButton.swift in Sources */,
 				48D293642418CEBA0010F4F8 /* Constants.swift in Sources */,
+				48D82199243DA24F00E78C50 /* MyTourTableViewCell.swift in Sources */,
 				48F4F79A2435B051005B8571 /* ShowCardsViewController.swift in Sources */,
 				48F4F79424359788005B8571 /* CreateCardViewController.swift in Sources */,
 				36102FD224068DB60009F61C /* TourPlanner.xcdatamodeld in Sources */,

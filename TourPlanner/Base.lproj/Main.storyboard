@@ -917,7 +917,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" id="0Eh-dO-i1v">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTourTableViewCell" rowHeight="96" id="0Eh-dO-i1v" customClass="MyTourTableViewCell" customModule="TourPlanner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Eh-dO-i1v" id="W04-70-lqr">
@@ -952,8 +952,18 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cardImage" destination="DNl-fC-OCC" id="4LK-p8-akf"/>
+                                            <outlet property="cardTitle" destination="ik9-96-z03" id="Riu-t6-XJu"/>
+                                            <outlet property="price" destination="9BW-Ub-gWi" id="DNd-7S-bRV"/>
+                                            <outlet property="statusLabel" destination="hjT-T6-fQK" id="ceR-Vu-The"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bib-dK-pUB" id="Blo-oo-Pl4"/>
+                                    <outlet property="delegate" destination="bib-dK-pUB" id="6lq-Ko-a7h"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -966,6 +976,9 @@
                         <viewLayoutGuide key="safeArea" id="ioo-L4-FmH"/>
                     </view>
                     <navigationItem key="navigationItem" id="OI3-Rs-JcK"/>
+                    <connections>
+                        <outlet property="myTourTableView" destination="wKi-sm-ET2" id="8qx-Sg-pI4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9j-0H-I6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
