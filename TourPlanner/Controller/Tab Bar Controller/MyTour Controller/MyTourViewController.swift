@@ -123,7 +123,7 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.cardImage.image = UIImage(named: "StaticImage2")
         cell.cardTitle.text = cardTitle[indexPath.row]
-        cell.price.text = cardPrice[indexPath.row]
+        cell.price.text = "$" + cardPrice[indexPath.row] + "/Day"
         
         if (isAccepted[indexPath.row] == "0" && isComplited[indexPath.row] == "0") {
             cell.statusLabel.text = "Requested"
