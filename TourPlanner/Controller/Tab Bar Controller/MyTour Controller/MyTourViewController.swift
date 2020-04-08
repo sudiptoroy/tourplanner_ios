@@ -38,6 +38,13 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
         myTourTableView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewDidLoad()
+        //self.CardCollectionView!.reloadData()
+        //getCardsByGuideID()
+    }
+    
     
     func getTourGuideRelationByGuideID () {
     
