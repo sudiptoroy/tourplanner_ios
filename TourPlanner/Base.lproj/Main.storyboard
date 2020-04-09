@@ -700,7 +700,7 @@
                                 <rect key="frame" x="15" y="355" width="92" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDY-nX-HdY">
@@ -739,6 +739,12 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsv-qh-aSX">
+                                <rect key="frame" x="275" y="326" width="84" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Profile Details"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -751,6 +757,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pQn-ha-yWG"/>
                     </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="c77-L1-3JL" id="Pas-2j-HDY"/>
+                        <outlet property="cardTitle" destination="Yz9-8W-0f7" id="Ecc-5a-DYL"/>
+                        <outlet property="pricePerDay" destination="mIh-aF-pud" id="mOp-Rm-2vJ"/>
+                        <outlet property="touristCountry" destination="mDY-nX-HdY" id="9ha-fd-FTV"/>
+                        <outlet property="touristName" destination="SLM-8t-9N1" id="JFk-73-MPE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dU8-7U-2hw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

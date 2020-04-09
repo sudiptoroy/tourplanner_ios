@@ -42,6 +42,7 @@
 		48F4F79C2435F6D8005B8571 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F4F79B2435F6D8005B8571 /* CardCollectionViewCell.swift */; };
 		48F4F79E24360322005B8571 /* GetCardByGuideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F4F79D24360322005B8571 /* GetCardByGuideModel.swift */; };
 		48F6D81B243EF4B90042626F /* MyTourDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F6D81A243EF4B90042626F /* MyTourDetailsViewController.swift */; };
+		48F6D81E243F2A4F0042626F /* TouristProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F6D81D243F2A4F0042626F /* TouristProfileModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		48F4F79B2435F6D8005B8571 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		48F4F79D24360322005B8571 /* GetCardByGuideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCardByGuideModel.swift; sourceTree = "<group>"; };
 		48F6D81A243EF4B90042626F /* MyTourDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTourDetailsViewController.swift; sourceTree = "<group>"; };
+		48F6D81D243F2A4F0042626F /* TouristProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristProfileModel.swift; sourceTree = "<group>"; };
 		D7AF61286C0D3710021D1B79 /* Pods-TourPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourPlanner.debug.xcconfig"; path = "Target Support Files/Pods-TourPlanner/Pods-TourPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 		F87DA27009FD05B4ADDD2500 /* Pods_TourPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TourPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E087C3374BEA5B0AC1FA96 /* Pods-TourPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourPlanner.release.xcconfig"; path = "Target Support Files/Pods-TourPlanner/Pods-TourPlanner.release.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				4828A92B243C88F300709D85 /* TouristGuideRelation Models */,
+				48F6D81C243F29F80042626F /* Tourist Model */,
 				48593BD62436EDA500E87A8F /* Guide Models */,
 				48593BD52436ED8200E87A8F /* Card Models */,
 			);
@@ -333,6 +336,14 @@
 				48593BDC243755F100E87A8F /* EditCardViewController.swift */,
 			);
 			path = "Card Cotroller";
+			sourceTree = "<group>";
+		};
+		48F6D81C243F29F80042626F /* Tourist Model */ = {
+			isa = PBXGroup;
+			children = (
+				48F6D81D243F2A4F0042626F /* TouristProfileModel.swift */,
+			);
+			path = "Tourist Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -524,6 +535,7 @@
 				36102FD224068DB60009F61C /* TourPlanner.xcdatamodeld in Sources */,
 				4828A92A243C88D700709D85 /* MyTourNavigationController.swift in Sources */,
 				48F4F79C2435F6D8005B8571 /* CardCollectionViewCell.swift in Sources */,
+				48F6D81E243F2A4F0042626F /* TouristProfileModel.swift in Sources */,
 				48225A662434A1F3007DAF3A /* HomeViewController.swift in Sources */,
 				4828A92F243C896400709D85 /* MyTourViewController.swift in Sources */,
 				48F4F79E24360322005B8571 /* GetCardByGuideModel.swift in Sources */,
