@@ -72,13 +72,14 @@ class MyTourDetailsViewController: UIViewController {
     }
     
     @IBAction func acceptButtonTapped(_ sender: Any) {
-        displayAcceptAlertMessage("Accept", "You are about to start the tour. Are you sure you want to accept the order")
+        displayAcceptAlert("Accept", "You are about to start the tour. Are you sure you want to accept the order?")
     }
     @IBAction func cancelButtonTapped(_ sender: Any) {
+        displayCancelAlert("Cancel", "Are you sure you want to cancel this request?")
     }
     
     // Function for accept button popup
-    func displayAcceptAlertMessage(_ title: String,_ userMessage: String) {
+    func displayAcceptAlert(_ title: String,_ userMessage: String) {
         let userAlert = UIAlertController(title: title, message:  userMessage, preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default)
         {
@@ -97,7 +98,7 @@ class MyTourDetailsViewController: UIViewController {
     }
     
     // Function for cancel button popup
-    func displayCancelAlertMessage(_ title: String,_ userMessage: String) {
+    func displayCancelAlert(_ title: String,_ userMessage: String) {
         let userAlert = UIAlertController(title: title, message:  userMessage, preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default)
         {
@@ -113,5 +114,18 @@ class MyTourDetailsViewController: UIViewController {
         userAlert.addAction(okAction)
         userAlert.addAction(cancelAction)
         self.present(userAlert, animated: true, completion: nil)
+    }
+    
+//    // Cancel request function
+//    func cancelRequest() {
+//        <#function body#>
+//    }
+    
+    // Display alert message
+    func displayAlertMessage(_ title: String,_ userMessage: String) {
+        let userAlert = UIAlertController(title: title, message:  userMessage, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+        userAlert.addAction(okAction)
+        present(userAlert, animated: true, completion: nil)
     }
 }
