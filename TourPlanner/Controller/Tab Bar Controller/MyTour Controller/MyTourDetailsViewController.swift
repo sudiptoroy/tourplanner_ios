@@ -77,7 +77,7 @@ class MyTourDetailsViewController: UIViewController {
     @IBAction func cancelButtonTapped(_ sender: Any) {
     }
     
-    // Function to display alert message
+    // Function for accept button popup
     func displayAcceptAlertMessage(_ title: String,_ userMessage: String) {
         let userAlert = UIAlertController(title: title, message:  userMessage, preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default)
@@ -96,4 +96,22 @@ class MyTourDetailsViewController: UIViewController {
         self.present(userAlert, animated: true, completion: nil)
     }
     
+    // Function for cancel button popup
+    func displayCancelAlertMessage(_ title: String,_ userMessage: String) {
+        let userAlert = UIAlertController(title: title, message:  userMessage, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default)
+        {
+            action in
+            print("Ok Pressed")
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) {
+            action in
+            print("Cancel Pressed")
+        }
+        
+        userAlert.addAction(okAction)
+        userAlert.addAction(cancelAction)
+        self.present(userAlert, animated: true, completion: nil)
+    }
 }
