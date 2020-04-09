@@ -17,6 +17,10 @@ class MyTourDetailsViewController: UIViewController {
     @IBOutlet weak var touristName: UILabel!
     @IBOutlet weak var touristCountry: UILabel!
     
+    // UIButton outlets
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var acceptButton: UIButton!
+    
     var cardIDReceived = ""
     var touristIDReceived = ""
     var relationIDReceived = ""
@@ -66,4 +70,30 @@ class MyTourDetailsViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func acceptButtonTapped(_ sender: Any) {
+        displayAcceptAlertMessage("Accept", "You are about to start the tour. Are you sure you want to accept the order")
+    }
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+    }
+    
+    // Function to display alert message
+    func displayAcceptAlertMessage(_ title: String,_ userMessage: String) {
+        let userAlert = UIAlertController(title: title, message:  userMessage, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default)
+        {
+            action in
+            print("Ok Pressed")
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) {
+            action in
+            print("Cancel Pressed")
+        }
+        
+        userAlert.addAction(okAction)
+        userAlert.addAction(cancelAction)
+        self.present(userAlert, animated: true, completion: nil)
+    }
+    
 }

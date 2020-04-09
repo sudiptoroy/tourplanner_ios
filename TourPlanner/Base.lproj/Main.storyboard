@@ -724,6 +724,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="acceptButtonTapped:" destination="WXS-gY-C66" eventType="touchUpInside" id="UM8-pI-SKF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5e-zA-P9B">
                                 <rect key="frame" x="16" y="550" width="343" height="50"/>
@@ -738,6 +741,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="WXS-gY-C66" eventType="touchUpInside" id="Pyd-eI-ONm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsv-qh-aSX">
                                 <rect key="frame" x="275" y="326" width="84" height="28"/>
@@ -758,6 +764,8 @@
                         <viewLayoutGuide key="safeArea" id="pQn-ha-yWG"/>
                     </view>
                     <connections>
+                        <outlet property="acceptButton" destination="gJX-ZL-kSv" id="8OY-zY-0G0"/>
+                        <outlet property="cancelButton" destination="z5e-zA-P9B" id="XvI-iR-6oG"/>
                         <outlet property="cardImageView" destination="c77-L1-3JL" id="Pas-2j-HDY"/>
                         <outlet property="cardTitle" destination="Yz9-8W-0f7" id="Ecc-5a-DYL"/>
                         <outlet property="pricePerDay" destination="mIh-aF-pud" id="mOp-Rm-2vJ"/>
