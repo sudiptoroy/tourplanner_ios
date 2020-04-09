@@ -14,6 +14,9 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var myTourTableView: UITableView!
     var guide_id: Int?
     var check = false
+    var cardIDForDetails = ""
+    var touristIDForDetails = ""
+    var relationIDForDetails = ""
     
     var id = [String]()
     var cardID = [String]()
@@ -84,6 +87,7 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         print(relation.card_id!)
                         self.cardID.append(String(relation.card_id!))
                         self.id.append(String(relation.id!))
+                        self.touristsID.append(String(relation.tourists_id!))
                         print("Print ID count \(self.id.count)")
                         self.isAccepted.append(String(relation.is_accepted!))
                         self.isComplited.append(String(relation.is_complited!))
@@ -91,6 +95,7 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         self.isCancelledByTourist.append(String(relation.is_cancelled_by_tourist!))
                         self.createdAt.append(relation.created_at!)
                         self.updatedAt.append(relation.updated_at!)
+                        
                         
                         
                         
@@ -143,5 +148,25 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("TouristGuideRelation ID: \(id[indexPath.row])")
+        print("Card ID: \(cardID[indexPath.row])")
+        print("Tourist ID: \(touristsID[indexPath.row])")
+        self.relationIDForDetails = id[indexPath.row]
+        self.cardIDForDetails = cardID[indexPath.row]
+        self.touristIDForDetails = touristsID[indexPath.row]
+        self.performSegue(withIdentifier: "TourDetailsView", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "TourDetailsView") {
+            let vc = segue.destination as! MyTourDetailsViewController
+            vc.cardIDReceived = self.cardIDForDetails
+            vc.touristIDReceived = self.touristIDForDetails
+            vc.relationIDReceived = self.relationIDForDetails
+            vc.guideIDReceived = self.guide_id
+        }
     }
 }
