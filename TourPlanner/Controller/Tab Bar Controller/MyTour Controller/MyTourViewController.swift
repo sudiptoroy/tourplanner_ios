@@ -46,6 +46,9 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
         viewDidLoad()
         //self.CardCollectionView!.reloadData()
         //getCardsByGuideID()
+        myTourTableView.reloadData()
+        self.getTourGuideRelationByGuideID()
+        
     }
     
     
@@ -105,19 +108,22 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         Alamofire.request(API.baseURL + "/cards/ByID", method: .post, parameters: param).validate().responseJSON {
                             response in
                             
+                            print(response)
+                            
                             do {
                                 let getCardDetails = try JSONDecoder().decode(CardByID.self, from: response.data!)
-                                //print("Card Title = \(String(describing: getCardDetails.data[0].card_title))")
+                                print("Card Title = \(String(describing: getCardDetails.data[0].card_title))")
                                 self.cardTitle.append(getCardDetails.data[0].card_title!)
                                 self.cardPrice.append(String(getCardDetails.data[0].price_per_day!))
-                                if (self.cardTitle.count > 0) {
-                                    self.myTourTableView?.reloadData()
-                                }
                             } catch {
                                 print("Error while parsing json of card api response")
                             }
                         }
                     }
+                    if (self.cardTitle.count > 0) {
+                        self.myTourTableView?.reloadData()
+                    }
+                    
                 } catch {
                     print("Error while parsing json of Tourist Guide relation api response")
                 }
