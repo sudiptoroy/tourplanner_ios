@@ -44,11 +44,7 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewDidLoad()
-        //self.CardCollectionView!.reloadData()
-        //getCardsByGuideID()
-        myTourTableView.reloadData()
-        self.getTourGuideRelationByGuideID()
-        
+
     }
     
     
@@ -121,7 +117,7 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         }
                     }
                     if (self.cardTitle.count > 0) {
-                        self.myTourTableView?.reloadData()
+                        self.myTourTableView!.reloadData()
                     }
                     
                 } catch {
@@ -143,15 +139,16 @@ class MyTourViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.cardTitle.text = cardTitle[indexPath.row]
         cell.price.text = "$" + cardPrice[indexPath.row] + "/Day"
         
-        if (isAccepted[indexPath.row] == "0" && isComplited[indexPath.row] == "0") {
-            cell.statusLabel.text = "Requested"
+        if (isCancelledByTourist[indexPath.row] == "1" || isCancelledByGuide[indexPath.row] == "1") {
+            cell.statusLabel.text = "Cancelled"
         } else if (isAccepted[indexPath.row] == "1" && isComplited[indexPath.row] == "0") {
             cell.statusLabel.text = "On Going"
         } else if (isComplited[indexPath.row] == "1") {
             cell.statusLabel.text = "Completed"
-        } else if (isCancelledByTourist[indexPath.row] == "1" || isCancelledByGuide[indexPath.row] == "1") {
-            cell.statusLabel.text = "Cancelled"
+        } else if (isAccepted[indexPath.row] == "0" && isComplited[indexPath.row] == "0") {
+            cell.statusLabel.text = "Requested"
         }
+        //
         
         return cell
     }

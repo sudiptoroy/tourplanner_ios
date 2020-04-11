@@ -72,10 +72,35 @@ class MyTourDetailsViewController: UIViewController {
     }
     
     @IBAction func acceptButtonTapped(_ sender: Any) {
+        
+        
         displayAcceptAlert("Accept", "You are about to start the tour. Are you sure you want to accept the order?")
     }
+    
+    
     @IBAction func cancelButtonTapped(_ sender: Any) {
-        displayCancelAlert("Cancel", "Are you sure you want to cancel this request?")
+        
+        let param = ["id": relationIDReceived,
+                     "api_key": API.API_key] as [String: Any]
+        
+        Alamofire.request(API.baseURL + "/tourist/TouristGuideRelationByID", method: .post, parameters: param).validate().responseJSON {
+            response in
+            
+            do {
+                let getRelation = try JSONDecoder().decode(TouristGuideRelation.self, from: response.data!)
+                let cancelledByGuide = getRelation.data[0].is_cancelled_by_guide
+                let cancelledByTourist = getRelation.data[0].is_cancelled_by_tourist
+                
+                if (cancelledByGuide == 0 && cancelledByTourist == 0) {
+                    self.displayCancelAlert("Cancel", "Are you sure you want to cancel this request?")
+                } else {
+                    self.displayAlertMessage("Cancelled Already", "The tour has already been cancelled")
+                }
+                
+            } catch {
+                print("Error While parsing json of tourist guide relation in accept button tapped")
+            }
+        }
     }
     
     // Function for accept button popup
@@ -104,6 +129,7 @@ class MyTourDetailsViewController: UIViewController {
         {
             action in
             print("Ok Pressed")
+            self.cancelRequest()
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) {
@@ -116,10 +142,35 @@ class MyTourDetailsViewController: UIViewController {
         self.present(userAlert, animated: true, completion: nil)
     }
     
-//    // Cancel request function
-//    func cancelRequest() {
-//        <#function body#>
-//    }
+    // Cancel request function
+    func cancelRequest() {
+        print("\nCancel Function Called")
+        
+        let param = ["id": relationIDReceived,
+                     "is_accepted": 0,
+                     "is_complited": 0,
+                     "is_cancelled_by_tourist": 0,
+                     "is_cancelled_by_guide": 1,
+                     "api_key": API.API_key] as [String: Any]
+        
+        Alamofire.request(API.baseURL + "/tourist/updateTouristGuideRelation", method: .post, parameters: param).validate().responseJSON {
+            response in
+            
+            print(response)
+            
+            do {
+                let cancelResponse = try JSONDecoder().decode(TouristGuideCancel.self, from: response.data!)
+                let success = cancelResponse.success
+                if (success!) {
+                    self.displayAlertMessage("Request Cancelled", "You've cancelled the tour request.")
+                } else {
+                    print("Error in success check")
+                }
+            } catch {
+                print("Error while parsing JSON of cancel response")
+            }
+        }
+    }
     
     // Display alert message
     func displayAlertMessage(_ title: String,_ userMessage: String) {
