@@ -21,6 +21,12 @@ class MyTourDetailsViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var acceptButton: UIButton!
     
+    var accepted: Int?
+    var completed: Int?
+    var cancelledByGuide: Int?
+    var cancelledByTourist: Int?
+    
+    
     var cardIDReceived = ""
     var touristIDReceived = ""
     var relationIDReceived = ""
@@ -34,7 +40,43 @@ class MyTourDetailsViewController: UIViewController {
         print("Tourist ID \(touristIDReceived)")
         print("Guide ID: \(String(describing: guideIDReceived))")
         self.showRequestDetials()
+        self.buttonState()
         self.title = "Tour Details"
+    }
+    
+    func buttonState () {
+        let param = ["id": relationIDReceived,
+                     "api_key": API.API_key] as [String: Any]
+        
+        Alamofire.request(API.baseURL + "/tourist/TouristGuideRelationByID", method: .post, parameters: param).validate().responseJSON {
+            response in
+            
+            print("\nResponse in buttonState function")
+            print(response)
+            
+            do {
+                let getRelationData = try JSONDecoder().decode(TouristGuideRelation.self, from: response.data!)
+                self.accepted = getRelationData.data[0].is_accepted
+                self.cancelledByGuide = getRelationData.data[0].is_cancelled_by_guide
+                self.cancelledByTourist = getRelationData.data[0].is_cancelled_by_tourist
+                self.completed = getRelationData.data[0].is_complited
+                
+                // Set button color state
+                if (self.cancelledByGuide == 1 || self.cancelledByTourist == 1 || self.completed == 1) {
+                    self.cancelButton.backgroundColor = UIColor.lightGray
+                    self.acceptButton.backgroundColor = UIColor.lightGray
+                }
+                if (self.accepted == 1) {
+                    self.cancelButton.backgroundColor = UIColor.lightGray
+                    self.acceptButton.backgroundColor = UIColor.lightGray
+                }
+                
+                // Set Accept Button Color State
+                
+            } catch {
+                
+            }
+        }
     }
     
     func showRequestDetials () {
