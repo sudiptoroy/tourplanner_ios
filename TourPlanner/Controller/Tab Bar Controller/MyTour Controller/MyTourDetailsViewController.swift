@@ -70,11 +70,8 @@ class MyTourDetailsViewController: UIViewController {
                     self.cancelButton.backgroundColor = UIColor.lightGray
                     self.acceptButton.backgroundColor = UIColor.lightGray
                 }
-                
-                // Set Accept Button Color State
-                
             } catch {
-                
+                print("Error while parsing Json in buttonState function")
             }
         }
     }
