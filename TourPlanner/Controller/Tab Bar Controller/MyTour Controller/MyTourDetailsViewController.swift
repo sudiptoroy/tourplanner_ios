@@ -119,26 +119,10 @@ class MyTourDetailsViewController: UIViewController {
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         
-        let param = ["id": relationIDReceived,
-                     "api_key": API.API_key] as [String: Any]
-        
-        Alamofire.request(API.baseURL + "/tourist/TouristGuideRelationByID", method: .post, parameters: param).validate().responseJSON {
-            response in
-            
-            do {
-                let getRelation = try JSONDecoder().decode(TouristGuideRelation.self, from: response.data!)
-                let cancelledByGuide = getRelation.data[0].is_cancelled_by_guide
-                let cancelledByTourist = getRelation.data[0].is_cancelled_by_tourist
-                
-                if (cancelledByGuide == 0 && cancelledByTourist == 0) {
-                    self.displayCancelAlert("Cancel", "Are you sure you want to cancel this request?")
-                } else {
-                    self.displayAlertMessage("Cancelled Already", "The tour has already been cancelled")
-                }
-                
-            } catch {
-                print("Error While parsing json of tourist guide relation in accept button tapped")
-            }
+        if (self.cancelledByGuide == 0 && self.cancelledByTourist == 0) {
+            self.displayCancelAlert("Cancel", "Are you sure you want to cancel this request?")
+        } else {
+            self.displayAlertMessage("Cancelled Already", "The tour has already been cancelled")
         }
     }
     
