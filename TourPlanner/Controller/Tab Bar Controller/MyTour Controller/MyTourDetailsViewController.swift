@@ -112,8 +112,17 @@ class MyTourDetailsViewController: UIViewController {
     
     @IBAction func acceptButtonTapped(_ sender: Any) {
         
-        
-        displayAcceptAlert("Accept", "You are about to start the tour. Are you sure you want to accept the order?")
+        if (self.cancelledByTourist == 0 && self.cancelledByGuide == 0) {
+            if (self.accepted == 0 && self.completed == 0) {
+                displayAcceptAlert("Accept", "You are about to start the tour. Are you sure you want to accept the order?")
+            } else if (self.accepted == 1 && self.completed == 0) {
+                displayAlertMessage("Tour Already accepted", "The Tour has already been accepted and the tour is ongoing")
+            } else if (self.completed == 1) {
+                displayAlertMessage("Completed", "The Tour is already completed")
+            }
+        } else {
+            displayAlertMessage("Tour Cancelled", "The tour has already been cancelled. You cannot accept the tour now.")
+        }
     }
     
     
