@@ -964,7 +964,7 @@
                     </view>
                     <connections>
                         <outlet property="cardDetailsTextView" destination="4cv-1Y-NYu" id="Oh1-i8-nQD"/>
-                        <outlet property="cardImage" destination="A0N-Dv-xmS" id="6bg-4n-err"/>
+                        <outlet property="cardImage" destination="A0N-Dv-xmS" id="Qx0-UA-atl"/>
                         <outlet property="cardPricePerDayLabel" destination="HDi-MJ-pzO" id="2gf-Sj-ogF"/>
                         <outlet property="cardRatingLabel" destination="FJV-nJ-9pc" id="OWp-Lp-dqB"/>
                         <outlet property="cardTitleLabel" destination="4cN-vu-DdH" id="Oii-MO-dV8"/>

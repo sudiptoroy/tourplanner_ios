@@ -12,10 +12,10 @@ import UIKit
 struct API {
     
     // Local Server
-    static let baseURL: String="http://192.168.0.111/TourPlanner/public/api"
-    static let API_key: String="/AHaqtuiVNFmu/KWHp7c2/TehmBmyjnZ8ITTiACMgIY="
+//    static let baseURL: String="http://192.168.0.111/TourPlanner/public/api"
+//    static let API_key: String="/AHaqtuiVNFmu/KWHp7c2/TehmBmyjnZ8ITTiACMgIY="
     
     // Live Server
-//    static let baseURL: String="http://tourplanner.deshiit.com/api"
-//    static let API_key: String="Bho7S)]?](6idg"
+    static let baseURL: String="http://tourplanner.deshiit.com/api"
+    static let API_key: String="Bho7S)]?](6idg"
 }

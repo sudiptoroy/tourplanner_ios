@@ -55,6 +55,7 @@ class ShowCardDetailsViewController: UIViewController {
             if ((response.result.value) != nil) {
                 do {
                     let getCardByCardIDResponse = try JSONDecoder().decode(CardByID.self, from: response.data!)
+                    self.cardImage.image = UIImage(named: "StaticImage2")
                     self.cardTitle = getCardByCardIDResponse.data[0].card_title
                     self.cardDescription = getCardByCardIDResponse.data[0].card_description
                     self.cardRating = getCardByCardIDResponse.data[0].card_average_rating
