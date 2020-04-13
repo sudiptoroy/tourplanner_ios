@@ -110,6 +110,11 @@ class MyTourDetailsViewController: UIViewController {
         }
     }
     
+    @IBAction func profileDetailsButtonTapped(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "ProfileDetailsView", sender: self)
+        
+    }
     @IBAction func acceptButtonTapped(_ sender: Any) {
         
         if (self.cancelledByTourist == 0 && self.cancelledByGuide == 0) {
@@ -201,6 +206,13 @@ class MyTourDetailsViewController: UIViewController {
             } catch {
                 print("Error while parsing JSON of cancel response")
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ProfileDetailsView") {
+            let vc = segue.destination as! TouristProfileViewController
+            vc.touristIDReceived = self.touristIDReceived
         }
     }
     

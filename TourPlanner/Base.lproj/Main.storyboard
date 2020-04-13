@@ -750,6 +750,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Profile Details"/>
+                                <connections>
+                                    <action selector="profileDetailsButtonTapped:" destination="WXS-gY-C66" eventType="touchUpInside" id="zmk-k6-8QB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -771,7 +774,7 @@
                         <outlet property="pricePerDay" destination="mIh-aF-pud" id="mOp-Rm-2vJ"/>
                         <outlet property="touristCountry" destination="mDY-nX-HdY" id="9ha-fd-FTV"/>
                         <outlet property="touristName" destination="SLM-8t-9N1" id="JFk-73-MPE"/>
-                        <segue destination="MoU-jO-gpZ" kind="show" id="KJl-9a-C3n"/>
+                        <segue destination="MoU-jO-gpZ" kind="show" identifier="ProfileDetailsView" id="KJl-9a-C3n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dU8-7U-2hw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -781,7 +784,7 @@
         <!--Tourist Profile View Controller-->
         <scene sceneID="bMs-Lc-6MX">
             <objects>
-                <viewController id="MoU-jO-gpZ" customClass="TouristProfileViewController" customModule="TourPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TouristProfileViewController" id="MoU-jO-gpZ" customClass="TouristProfileViewController" customModule="TourPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0tj-fJ-HWc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -806,21 +809,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country  :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUm-vs-nTp">
-                                <rect key="frame" x="31" y="313" width="56" height="15"/>
+                                <rect key="frame" x="36" y="313" width="56" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gender  :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJP-TT-egS">
-                                <rect key="frame" x="34" y="340" width="52" height="15"/>
+                                <rect key="frame" x="40" y="340" width="52" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Joined  :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tl7-gW-BBl">
-                                <rect key="frame" x="38" y="367" width="49" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DOB  :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tl7-gW-BBl">
+                                <rect key="frame" x="56" y="367" width="37" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -847,6 +850,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Joined Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33e-gn-dfk">
+                                <rect key="frame" x="18" y="393" width="75" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="b3o-Ty-KHq"/>
@@ -854,8 +864,8 @@
                     <connections>
                         <outlet property="country" destination="wk2-9o-E3M" id="iZd-V9-cvA"/>
                         <outlet property="coverImage" destination="bGa-Bm-ALg" id="8sB-Lr-RxW"/>
+                        <outlet property="dateOfBirth" destination="ciY-Wc-aUf" id="9De-aD-TXr"/>
                         <outlet property="gender" destination="xIy-IB-wff" id="h4b-6J-E7a"/>
-                        <outlet property="joinedDate" destination="ciY-Wc-aUf" id="H0X-tj-ynk"/>
                         <outlet property="profileImage" destination="L6F-pD-MUh" id="Obi-MR-QtB"/>
                         <outlet property="touristName" destination="yoC-Kx-cLH" id="qWa-Ef-i7U"/>
                     </connections>

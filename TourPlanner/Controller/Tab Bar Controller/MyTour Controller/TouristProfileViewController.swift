@@ -15,10 +15,13 @@ class TouristProfileViewController: UIViewController {
     @IBOutlet weak var touristName: UILabel!
     @IBOutlet weak var country: UILabel!
     @IBOutlet weak var gender: UILabel!
-    @IBOutlet weak var joinedDate: UILabel!
+    @IBOutlet weak var dateOfBirth: UILabel!
+    
+    var touristIDReceived = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print("\n============= Touist Profile View ===============")
+        print("Tourist Id Received: \(touristIDReceived)")
     }
 }
