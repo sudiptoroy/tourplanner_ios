@@ -31,6 +31,16 @@ class MyTourDetailsViewController: UIViewController {
     var touristIDReceived = ""
     var relationIDReceived = ""
     var guideIDReceived: Int?
+    
+    // Global variables for service card
+    var getCardtitle = ""
+    var cardDescription = ""
+    var placeIDs = ""
+    var getCardTags = ""
+    var cardAvgRating: Double?
+    var getPricePerDay = ""
+    var cardStatus = ""
+    var cardTags = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,7 +127,7 @@ class MyTourDetailsViewController: UIViewController {
     }
     @IBAction func acceptButtonTapped(_ sender: Any) {
         
-        if (self.cancelledByTourist == 0 && self.cancelledByGuide == 0) {
+        if (self.cancelledByTourist == 0 || self.cancelledByGuide == 0) {
             if (self.accepted == 0 && self.completed == 0) {
                 displayAcceptAlert("Accept", "You are about to start the tour. Are you sure you want to accept the order?")
             } else if (self.accepted == 1 && self.completed == 0) {
@@ -147,6 +157,34 @@ class MyTourDetailsViewController: UIViewController {
         {
             action in
             print("Ok Pressed")
+            
+            let relationParam = ["id": self.relationIDReceived,
+                                 "is_accepted": 1,
+                                 "is_complited": 0,
+                                 "is_cancelled_by_tourist": 0,
+                                 "is_cancelled_by_guide": 0,
+                                 "api_key": API.API_key] as [String: Any]
+            
+            // Calling update tourist guide relation api to accept the tour
+            Alamofire.request(API.baseURL + "/tourist/updateTouristGuideRelation", method: .post, parameters: relationParam).validate().responseJSON {
+                response in
+                
+                print(response)
+                
+                do {
+                    let acceptResponse = try JSONDecoder().decode(TouristGuideAccept.self, from: response.data!)
+                    let accepted = acceptResponse.success
+                    self.getCard()
+                    self.updateCard()
+                    if (accepted == true) {
+                        self.displayAlertMessage("Tour Accpeted", "The tour has started. Provide an excellent service and get the highest rating. You're representing the country right now!")
+                    } else {
+                        self.displayAlertMessage("Failed", "Something went worng while accepting the tour")
+                    }
+                } catch {
+                    print("\nError while parsing json in accepting tour")
+                }
+            }
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) {
@@ -205,6 +243,54 @@ class MyTourDetailsViewController: UIViewController {
                 }
             } catch {
                 print("Error while parsing JSON of cancel response")
+            }
+        }
+    }
+    
+    // Function to get card information
+    func getCard() {
+        let cardParam = ["id": self.cardIDReceived,
+                         "api_key": API.API_key] as [String: Any]
+        
+        Alamofire.request(API.baseURL + "/cards/ByID", method: .post, parameters: cardParam).validate().responseJSON {
+            response in
+            print("Get Card response: \n \(response)")
+            do {
+                let cardInfo = try JSONDecoder().decode(CardByID.self, from: response.data!)
+                self.getCardtitle = cardInfo.data[0].card_title!
+                self.cardDescription = cardInfo.data[0].card_description!
+                self.cardAvgRating = cardInfo.data[0].card_average_rating
+                self.cardTags = cardInfo.data[0].card_category_tags!
+                self.getPricePerDay = self.pricePerDay.text!
+                self.placeIDs = cardInfo.data[0].place_ids!
+            } catch {
+                print("Error while parsing json in getCard function")
+            }
+        }
+    }
+    
+    // function to update service status in the accepted service_card
+    func updateCard() {
+        let param = ["id": self.cardIDReceived,
+                     "guide_id": self.guideIDReceived!,
+                     "card_title": self.cardTitle.text!,
+                     "card_description": self.cardDescription,
+                     "price_per_day": self.getPricePerDay,
+                     "place_ids": self.placeIDs,
+                     "service_status": 1,
+                     "card_status": 1,
+                     "card_category_tags": self.cardTags,
+                     "api_key": API.API_key] as [String: Any]
+        
+        Alamofire.request(API.baseURL + "/cards/updateCard", method: .post, parameters: param).validate().responseJSON {
+            response in
+            print("Updated Card info: \n \(response)")
+            
+            do {
+                let updateCardResponse = try JSONDecoder().decode(UpdateCard.self, from: response.data!)
+                print("Card Updated Successfully \(updateCardResponse.success)")
+            } catch {
+                print("Error while parsing json in updateCard")
             }
         }
     }
