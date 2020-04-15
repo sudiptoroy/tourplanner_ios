@@ -27,6 +27,7 @@
 		4828A92A243C88D700709D85 /* MyTourNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4828A929243C88D700709D85 /* MyTourNavigationController.swift */; };
 		4828A92D243C891900709D85 /* TouristGuideRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4828A92C243C891900709D85 /* TouristGuideRelation.swift */; };
 		4828A92F243C896400709D85 /* MyTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4828A92E243C896400709D85 /* MyTourViewController.swift */; };
+		48298A452447215B00D427BF /* TouristGuideAcceptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48298A442447215B00D427BF /* TouristGuideAcceptModel.swift */; };
 		4853BA25241E29610049C5FA /* PendingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4853BA24241E29610049C5FA /* PendingProfileViewController.swift */; };
 		48593BD824370F6700E87A8F /* ShowCardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48593BD724370F6700E87A8F /* ShowCardDetailsViewController.swift */; };
 		48593BDA2437348400E87A8F /* GetCardByCardIDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48593BD92437348400E87A8F /* GetCardByCardIDModel.swift */; };
@@ -90,6 +91,7 @@
 		4828A929243C88D700709D85 /* MyTourNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTourNavigationController.swift; sourceTree = "<group>"; };
 		4828A92C243C891900709D85 /* TouristGuideRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristGuideRelation.swift; sourceTree = "<group>"; };
 		4828A92E243C896400709D85 /* MyTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTourViewController.swift; sourceTree = "<group>"; };
+		48298A442447215B00D427BF /* TouristGuideAcceptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristGuideAcceptModel.swift; sourceTree = "<group>"; };
 		4853BA24241E29610049C5FA /* PendingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingProfileViewController.swift; sourceTree = "<group>"; };
 		48593BD724370F6700E87A8F /* ShowCardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCardDetailsViewController.swift; sourceTree = "<group>"; };
 		48593BD92437348400E87A8F /* GetCardByCardIDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCardByCardIDModel.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			children = (
 				4828A92C243C891900709D85 /* TouristGuideRelation.swift */,
 				48FE2A2F2441CC2900452E58 /* TouristGuideCancelModel.swift */,
+				48298A442447215B00D427BF /* TouristGuideAcceptModel.swift */,
 			);
 			path = "TouristGuideRelation Models";
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				48F4F79A2435B051005B8571 /* ShowCardsViewController.swift in Sources */,
 				48F4F79424359788005B8571 /* CreateCardViewController.swift in Sources */,
 				36102FD224068DB60009F61C /* TourPlanner.xcdatamodeld in Sources */,
+				48298A452447215B00D427BF /* TouristGuideAcceptModel.swift in Sources */,
 				4828A92A243C88D700709D85 /* MyTourNavigationController.swift in Sources */,
 				48F4F79C2435F6D8005B8571 /* CardCollectionViewCell.swift in Sources */,
 				48F6D81E243F2A4F0042626F /* TouristProfileModel.swift in Sources */,
